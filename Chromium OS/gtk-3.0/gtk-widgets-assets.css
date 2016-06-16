@@ -90,13 +90,13 @@
 /********************************
  * Touch text selection handles *
  ********************************/
-.cursor-handle.bottom {
-	background-image: url("assets/slider-horiz.png");
-}
+/*.cursor-handle.bottom {*/
+/*	background-image: url("assets/slider-horiz.png");*/
+/*}*/
 
-.cursor-handle.top {
-	background-image: url("assets/slider-horiz.png");
-}
+/*.cursor-handle.top {*/
+/*	background-image: url("assets/slider-horiz.png");*/
+/*}*/
 
 /* menuitem */
 
@@ -130,7 +130,9 @@
  * window actions *
  ******************/
 
-.titlebar .titlebutton.minimize {
+/* unavailable for now */
+
+/* .titlebar .titlebutton.minimize {
     color: transparent;
     border-image: none;
     box-shadow: none;
@@ -205,4 +207,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: -gtk-scaled(url("buttons/close-focused-active.png"));
-}
+} */

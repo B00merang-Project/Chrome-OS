@@ -72,6 +72,7 @@
 .menu-background /* Main menu */
 .tile-preview,
 .tile-hud,
+#notification,
 .tile-preview.snap,
 .tile-hud.snap {
 	border: 1px solid #8c8c8c;
@@ -114,7 +115,7 @@
 }
 
 .popup-slider-menu-item { /* Volume slider */
-	-slider-active-background-color: #3399ff;
+	-slider-active-background-color: #4c4c4c;
 }
 /*=====================================================================
  * the rest of the theme vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -367,6 +368,7 @@ StScrollBar StButton#hhandle {
 	background-color: rgba(0,255,0,0.6);
 }
 #panelRight:dnd {
+	border-image: none;
 	background-color: rgba(0,0,255,0.6);
 }
 #panelLeft:ltr {
@@ -670,17 +672,18 @@ StScrollBar StButton#hhandle {
  * Notifications
  * ===================================================================*/
 #notification {
-	font-size: 8.5pt;
+	font-size: 9.5pt;
 	padding: 8px 8px 8px 8px;
 	spacing-rows: 10px;
 	spacing-columns: 10px;
-	margin-from-right-edge-of-screen: 0px;
+	margin-from-right-edge-of-screen: 20px;
 	width: 34em;
-	color: white;
+	color: black;
+	box-shadow: 0 0 8px 2px rgba(0,0,0,0.25);
 }
 #notification.multi-line-notification {
 	padding-bottom: 8px;
-	color: white;
+	color: black;
 }
 /* We use row-span = 2 for the image cell, which prevents its height preferences to be
 	taken into account during allocation, so its height ends up being limited by the height
@@ -688,7 +691,7 @@ StScrollBar StButton#hhandle {
 	height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
 .notification-with-image {
 	min-height: 159px;
-	color: white;
+	color: black;
 }
 #notification-scrollview {
 	max-height: 10em;
@@ -715,13 +718,13 @@ StScrollBar StButton#hhandle {
 	padding: 4px;
 	color: black;
 	border-image: url('entry.png') 2;
-	caret-color: white;
+	caret-color: black;
 	caret-size: 2px;
 }
 #notification StEntry:focus {
 	color: black;
 	border-image: url('entry.png') 2;
-	caret-color: white;
+	caret-color: black;
 	caret-size: 2px;
 }
 /* ===================================================================
@@ -800,7 +803,7 @@ StScrollBar StButton#hhandle {
  * Modal dialogs
  * ===================================================================*/
 .modal-dialog {
-	font-size: 12pt;
+	font-size: 10pt;
 	color: black;
 	padding-right: 42px;
 	padding-left: 42px;
@@ -1419,7 +1422,7 @@ StScrollBar StButton#hhandle {
 .panel-launcher:hover {
 	margin: 0px;
 	padding: 3px;
-	background-color: rgba(0,0,0,0.15)
+	border-image: url('hover-box.png') 4;
 }
 .panel-launcher-add-dialog-content-box {
 	padding: 6px;
@@ -1481,7 +1484,7 @@ StScrollBar StButton#hhandle {
     transition-duration: 50;
 }
 .applet-box:hover {
-	background-color: rgba(0,0,0,0.15)
+	border-image: url('hover-box.png') 4 4 4 4;
 }
 .applet-label {
 	font-weight: normal;

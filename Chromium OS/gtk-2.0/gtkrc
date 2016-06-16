@@ -105,13 +105,13 @@ style "murrine-default" {
 	fg[INSENSITIVE] = mix (0.5, @bg_color, @fg_color)
 
 	bg[NORMAL] = @bg_color
-	bg[PRELIGHT] = shade (1.02, @bg_color)
+	bg[PRELIGHT] = shade (1.0, @bg_color)
 	bg[SELECTED] = @selected_bg_color
 	bg[ACTIVE] = shade (0.9, @bg_color)
 	bg[INSENSITIVE] = @bg_color
 
 	base[NORMAL] = @base_color
-	base[PRELIGHT] = shade (0.95, @base_color)
+	base[PRELIGHT] = shade (0.95, @bg_color)
 	base[SELECTED] = @selected_bg_color
 	base[ACTIVE] = @selected_bg_color
 	base[INSENSITIVE] = shade (0.85, @base_color)
@@ -188,11 +188,12 @@ style "murrine-notebook" = "murrine-notebook-bg" {
 
 style "murrine-button"  = "murrine-wider" {
 	bg[NORMAL] = shade (1.08, @bg_color)
-	bg[PRELIGHT] = shade (1.10, @bg_color)
+	bg[PRELIGHT] = shade (1.0, @bg_color)
 	bg[ACTIVE] = shade (0.95, @bg_color)
 	bg[INSENSITIVE] = shade (0.85, @bg_color)
 
   	engine "murrine" {
+		gradient_shades = { 0.95, 0.92, 0.91, 0.9 }
 	}
 }
 

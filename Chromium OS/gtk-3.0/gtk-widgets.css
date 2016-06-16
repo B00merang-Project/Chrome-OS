@@ -13,7 +13,7 @@
     -GtkButtonBox-child-min-height: 24;
     -GtkButtonBox-child-internal-pad-y: 1;
     -GtkCheckButton-indicator-size: 16;
-    -GtkCheckMenuItem-indicator-size: 14;
+    -GtkCheckMenuItem-indicator-size: 12;
     -GtkExpander-expander-size: 8;
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
@@ -211,11 +211,11 @@ GtkAssistant .sidebar {
 
     padding: 3px;
     border-width: 1px;
-    border-radius: 0px;
+    border-radius: 2px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.65);
     background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, shade(@theme_base_color, 0.95), shade(@theme_base_color, 0.9));
     color: @theme_fg_color;
 }
 
@@ -1889,7 +1889,7 @@ GtkStatusbar {
 
 /**********
  * switch *
- **********
+ **********/
 GtkSwitch {
     padding: 0;
     border-radius: 0px;
@@ -1899,9 +1899,10 @@ GtkSwitch {
 GtkSwitch.slider {
     border-width: 1px;
     border-style: solid;
+	border-radius: 3px;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, shade(@theme_base_color, 0.95), shade(@theme_base_color, 0.85));
 }
 
 GtkSwitch.slider:insensitive {
@@ -1911,8 +1912,10 @@ GtkSwitch.slider:insensitive {
 }
 
 GtkSwitch.trough {
+	border-radius: 3px;
+	border-image: none;
     border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 0.95);
+    background-color: shade(@theme_base_color, 0.95);
     background-image: none;
     color: @theme_fg_color;
 }
@@ -1929,79 +1932,6 @@ GtkSwitch.trough:insensitive {
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
     color: mix(@theme_fg_color, @theme_bg_color, 0.5);
-}*/
-
-GtkSwitch {
-    -GtkWidget-focus-line-width: 0;
-    border-radius: 8px;
-    padding: 0;
-}
-
-.menu GtkSwitch.trough,
-.toolbar.menubar GtkSwitch.trough,
-.primary-toolbar .toolbar GtkSwitch.trough,
-.primary-toolbar.toolbar GtkSwitch.trough,
-GtkSwitch.trough,
-GtkSwitch.trough:insensitive,
-GtkSwitch.trough:backdrop {
-    border: none;
-    border-image: none;
-    background: none;
-    color: transparent;
-    box-shadow: none;
-    background-image: url("assets/switch-off.svg");
-    background-size: 44px 20px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-shadow: none;
-}
-
-GtkSwitch.trough {
-    background-image: url("assets/switch-off.svg");
-}
-
-GtkSwitch.trough:active {
-    background-image: url("assets/switch-on.svg");
-}
-
-GtkSwitch.trough:insensitive {
-    background-image: url("assets/switch-off-disabled.svg");
-}
-
-GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-on-disabled.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough,
-.primary-toolbar .toolbar GtkSwitch.trough,
-.primary-toolbar.toolbar GtkSwitch.trough {
-    background-image: url("assets/switch-dark-off.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:active,
-.primary-toolbar .toolbar GtkSwitch.trough:active,
-.primary-toolbar.toolbar GtkSwitch.trough:active {
-    background-image: url("assets/switch-dark-on.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:insensitive,
-.primary-toolbar .toolbar GtkSwitch.trough:insensitive,
-.primary-toolbar.toolbar GtkSwitch.trough:insensitive {
-    background-image: url("assets/switch-dark-off-disabled.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:active:insensitive,
-.primary-toolbar .toolbar GtkSwitch.trough:active:insensitive,
-.primary-toolbar.toolbar GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-dark-on-disabled.svg");
-}
-
-GtkSwitch.slider {
-    border: none;
-    border-image: none;
-    background: none;
-    color: transparent;
-    box-shadow: none;
 }
 
 /************
