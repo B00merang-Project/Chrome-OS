@@ -130,9 +130,7 @@
  * window actions *
  ******************/
 
-/* unavailable for now */
-
-/* .titlebar .titlebutton.minimize {
+.titlebar .titlebutton.minimize {
     color: transparent;
     border-image: none;
     box-shadow: none;
@@ -207,4 +205,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: -gtk-scaled(url("buttons/close-focused-active.png"));
-} */
+}
