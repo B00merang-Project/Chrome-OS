@@ -349,8 +349,8 @@ StScrollBar StButton#hhandle {
     font-size: 8.5pt;
     font-weight: normal;
     height: 44px;
-    border: solid 0 rgba(0,0,0,0.8);
-    border-bottom-width: 2px;
+    border: inset 0 rgba(0,0,0,0.9);
+    border-bottom-width: 4px;
 }
 #panelLeft {
     spacing: 0px;
