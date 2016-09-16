@@ -44,7 +44,7 @@
 </frame_geometry>
 
 <draw_ops name="title-text-focused">
-<title color="#ffffff" x="5" y="(height - title_height) / 2"/>
+<title color="#000000" x="5" y="(height - title_height) / 2"/>
 </draw_ops>
 
 <draw_ops name="title-text-unfocused">
