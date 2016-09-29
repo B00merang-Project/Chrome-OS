@@ -13,7 +13,7 @@ NEW ON GTK 3.18
 GtkSidebarRow.list-row {
   padding: 0px; }
 GtkSidebarRow .sidebar-revealer {
-  padding: 1px 14px 1px 12px; }
+  padding: 6px 14px 6px 12px; }
 GtkSidebarRow .sidebar-icon:dir(ltr) {
   padding-right: 8px; }
 GtkSidebarRow .sidebar-icon:dir(rtl) {
@@ -83,34 +83,6 @@ GtkSidebarRow .sidebar-label:dir(rtl) {
     text-shadow: none;
 }
 
-.titlebar .titlebutton {
-    padding: 7px;
-    border-style: solid;
-	border-radius: 30px;
-    background: none;
-    color: @theme_selected_bg_color;
-    icon-shadow: none;
-}
-
-.titlebar .titlebutton:hover,
-.titlebar .titlebutton:hover:focus {
-    background: none;
-    color: @theme_selected_bg_color;
-}
-
-.titlebar .titlebutton:active,
-.titlebar .titlebutton:active:hover {
-    background: none;
-    color: @theme_selected_bg_color;
-    box-shadow: none;
-}
-
-.titlebar .titlebutton:backdrop {
-    background-image: none;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-    icon-shadow: none;
-}
-
 .window-frame {
     border-style: none;
     border-radius: 0;
@@ -168,13 +140,13 @@ GtkSidebarRow .sidebar-label:dir(rtl) {
     border-image: linear-gradient(to top, shade(@theme_selected_bg_color, 1.0)) 12 8 12 8 / 12px 8px 12px 8px stretch;
 }
 
-.trough,
+/*.trough,
 .trough row,
 .trough row:hover,
 .trough row:selected,
 .trough row:selected:focus {
     border-image: linear-gradient(to top, shade(@theme_bg_color, 1.08)) 12 8 12 8 / 12px 8px 4px 12px stretch;
-}
+}*/
 
 /**************
  * over under *

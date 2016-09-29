@@ -38,8 +38,6 @@
 .modal-dialog,
 .menu-background, /* Main menu */
 .workspace-osd,
-.expo-workspaces-name-entry, /* Workspaces */
-.expo-workspaces-name-entry#selected,
 .info-osd, /* Window Snap message */
 .osd-window, /* Media keys */
 .tile-preview,
@@ -47,6 +45,15 @@
 .tile-preview.snap,
 .tile-hud.snap {
     background-color: white;
+}
+
+/* Workspaces names in expo */
+.expo-workspaces-name-entry {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.expo-workspaces-name-entry#selected {
+    background-color: rgba(255,255,255,0.35);
 }
 
 #notification {
@@ -84,7 +91,7 @@
 .expo-workspaces-name-entry, /* Workspaces */
 .info-osd, /* Window Snap message */
 .osd-window  /* Media keys */ {
-    border: 1px solid black;
+    border: 1px solid transparent;
 }
 
 /* ===================================================================
@@ -94,7 +101,7 @@
 .datemenu-date-label,
 .expo-workspaces-name-entry#selected,
 .calendar-day-with-events{
-    color: #4281f3;
+    color: black;
 }
 /* ".keyboard-key:active" background on line 1074 */
 .toggle-switch-us:checked,
@@ -106,7 +113,7 @@
 .expo-workspace-thumbnail-frame#active,
 .window-caption#selected,
 .expo-workspaces-name-entry#selected {
-    border: 1px solid #4281f3;
+    border: 1px solid transparent;
 }
 #notification StEntry, #notification StEntry:focus, .run-dialog-entry,
 #menu-search-entry, .panel-launcher-add-dialog-entry,
@@ -161,7 +168,7 @@ StScrollBar StBin#trough {
 
 StScrollBar StButton#vhandle,
 StScrollBar StButton#hhandle {
-    border-image: url("scroll-handle.png") 12;
+    border-image: url("scroll-handle.png") 5;
 }
 
  StScrollBar StButton#vhandle:hover,
@@ -170,7 +177,7 @@ StScrollBar StButton#hhandle {
  StScrollBar StButton#hhandle:active,
  StScrollBar StButton#vhandle:focus,
  StScrollBar StButton#hhandle:focus {
-    border-image: url("scroll-handle-hover.png") 12;
+    border-image: url("scroll-handle-hover.png") 5;
 }
 
 #Tooltip {
@@ -452,8 +459,12 @@ StScrollBar StButton#hhandle {
     color: black;
     spacing: 25px;
     padding: 5px;
+    background-color: rgba(255,255,255,0.15);
 }
-.window-caption#selected {}
+.window-caption#selected {
+    background-color: rgba(255,255,255,0.3);
+}
+
 .workspace-controls {
     visible-height: 32px; /* Amount visible before hovering */
 }
@@ -1522,6 +1533,7 @@ StScrollBar StButton#hhandle {
 }
 .expo-workspaces-name-entry#selected {
     font-weight: normal;
+    color: black;
 }
 .expo-workspaces-name-entry:focus {
     color: black;
