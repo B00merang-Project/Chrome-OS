@@ -1257,7 +1257,7 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab.top:active {
-    padding: 3px 7px 1px 7px;
+    box-shadow: 0 2px @theme_selected_bg_color;
 }
 
 .notebook tab.top {
@@ -1265,9 +1265,9 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab.right:active {
-    padding: 4px 6px 4px 1px;
     background-image: none;
     background-color: @theme_base_color;
+    box-shadow: -2px 0 @theme_selected_bg_color;
 }
 
 .notebook tab.right {
@@ -1276,9 +1276,9 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab.bottom:active {
-    padding: 1px 7px 4px 7px;
     background-image: none;
     background-color: @theme_base_color;
+    box-shadow: 0 -2px @theme_selected_bg_color;
 }
 
 .notebook tab.bottom {
@@ -1287,13 +1287,12 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab.left:active {
-    padding: 4px 1px 4px 6px;
     background-image: none;
     background-color: @theme_base_color;
+    box-shadow: 2px 0 @theme_selected_bg_color;
 }
 
 .notebook tab.left {
-    padding: 3px 0 3px 4px;
     border-image-width: 1px 0;
 }
 
