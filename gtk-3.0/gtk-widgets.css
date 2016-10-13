@@ -1791,6 +1791,11 @@ GtkComboBox .separator {
     border-width: 0;
 }
 
+/* nemo sidebar padding */
+NemoWindow .sidebar .cell {
+  padding: 2px 2px; 
+}
+
 /**************
  * spinbutton *
  **************/
