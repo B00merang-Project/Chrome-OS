@@ -561,6 +561,10 @@ GtkComboBox.combobox-entry .button:insensitive {
     color: @progressbar_color;
 }
 
+GtkTreeView .entry {
+	padding: 0 6px;
+}
+
 /************
  * expander *
  ************/
@@ -610,6 +614,10 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
+}
+
+GtkStatusbar .frame {
+    border-width: 0;
 }
 
 /*******************
@@ -1350,17 +1358,13 @@ GtkProgressBar {
     border-radius: 0px;
 }
 
+
 .progressbar,
 .progressbar row,
 .progressbar row:hover,
 .progressbar row:selected,
-.progressbar row:selected:focus {
-        /* background-image:url("assets/progressbar.svg");*/
-        background-image: none;
-        background-position:right center;
-        background-repeat:no-repeat;
-        box-shadow:none;
-        border-image: linear-gradient(to top, shade(@theme_bg_color, 0.6)) 4 4 4 4 / 4px 8px 4px 8px stretch;
+.progressbar row:selected:focused {
+    border-image: linear-gradient(to top, shade(@theme_selected_bg_color, 1.0)) 12 8 12 8 / 12px 8px 12px 8px stretch;
 }
 
 .trough,
@@ -1795,6 +1799,47 @@ GtkComboBox .separator {
 NemoWindow .sidebar .cell {
   padding: 2px 2px; 
 }
+
+/* -------------
+NEW ON GTK 3.18
+---------------*/
+
+.sidebar-item {
+  padding: 10px 4px; }
+  .sidebar-item > Gtklabel {
+    padding-left: 6px;
+    padding-right: 6px; }
+  .sidebar-item.needs-attention > Gtklabel {
+    background-size: 6px 6px, 0 0; }
+
+GtkSidebarRow.list-row {
+  padding: 0px; }
+GtkSidebarRow .sidebar-revealer {
+  padding: 6px 14px 6px 12px; }
+GtkSidebarRow .sidebar-icon:dir(ltr) {
+  padding-right: 8px; }
+GtkSidebarRow .sidebar-icon:dir(rtl) {
+  padding-left: 8px; }
+GtkSidebarRow .sidebar-label:dir(ltr) {
+  padding-right: 2px; }
+GtkSidebarRow .sidebar-label:dir(rtl) {
+  padding-left: 2px; }
+
+
+.sidebar-button.button.image-button {
+  padding: 3px;
+  border-radius: 0;
+  box-shadow: 0px 0px 0px alpha(@dark_shadow,0)}
+.sidebar-button.button:not(:hover):not(:active) > GtkImage {
+  opacity: 0.5; }
+
+.sidebar-item {
+  padding: 10px 4px; }
+  .sidebar-item > GtkLabel {
+    padding-left: 6px;
+    padding-right: 6px; }
+  .sidebar-item.needs-attention > GtkLabel {
+    background-size: 6px 6px, 0 0; }
 
 /**************
  * spinbutton *
@@ -3584,11 +3629,16 @@ GtkBubbleWindow .toolbar {
  * CSD *
  *******/
 .titlebar {
-    border-radius: 0px 0px 0 0;
-    background-image: none;
+    border-radius: 0;
     background-color: @titlebar_bg_color;
+    background-image: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
+}
+
+.titlebar.default-decoration {
+    border: none;
+    box-shadow: none;
 }
 
 .tiled .titlebar {
@@ -3619,52 +3669,9 @@ GtkBubbleWindow .toolbar {
     text-shadow: none;
 }
 
-.titlebar .titlebutton {
-    padding: 4px;
-    border-style: none;
-    background: none;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
-    icon-shadow: none;
-}
-
-.titlebar .titlebutton:hover,
-.titlebar .titlebutton:hover:focus {
-    background: #f5f5f5;
-    color: @theme_text_color;
-}
-
-.titlebar .titlebutton:active,
-.titlebar .titlebutton:active:hover {
-    background: #b6b6b6;
-    color: @theme_text_color;
-    box-shadow: none;
-}
-
-
-/*.titlebar .right .titlebutton:first-child {
-    border-left: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .right .titlebutton:last-child {
-}
-
-.titlebar .left .titlebutton:last-child {
-    border-right: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .left .titlebutton:first-child {
-}
-*/
-
-.titlebar .titlebutton:backdrop {
-    background-image: none;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-    icon-shadow: none;
-}
-
 .window-frame {
     border-style: none;
-    border-radius: 0px 0px 0 0;
+    border-radius: 0;
     box-shadow: 0 3px 7px 1px alpha(black, 0.7),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
 
@@ -3672,14 +3679,43 @@ GtkBubbleWindow .toolbar {
     margin: 10px;
 }
 
-/*Sets GNOME-SHELL Window borders*/
 .window-frame.tiled {
     border-radius: 0;
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 3px 5px 1px alpha(black, 0.5),
+    box-shadow: 0 6px 6px 1px alpha(black, 0.5),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
+}
+
+/* Server-side decoration (SSD) */
+.window-frame.ssd {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18); 
+}
+
+.window-frame.ssd,
+.window-frame.ssd:backdrop {
+    background-color: @titlebar_bg_color;
+}
+
+/* Client-side Decorations (CSD)*/
+.window-frame.csd.tooltip {
+    border-radius: 0;
+    box-shadow: none; 
+}
+
+.window-frame.csd.message-dialog {
+    border-radius: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); 
+}
+
+.window-frame.solid-csd {
+     border: solid 1px shade(@bg_color, 0.8);
+     border-radius: 0;
+     margin: 2px;
+     background-color: @titlebar_bg_color;
+     box-shadow: none; 
 }
 
 /**************
