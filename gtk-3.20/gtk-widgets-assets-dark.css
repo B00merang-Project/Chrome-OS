@@ -1,136 +1,12 @@
 /* Chromium OS theme */
 
-/*******************
- * check and radio *
- *******************/
-/* draw regular check and radio items using our assets */
-check,
-check row:selected,
-check row:selected:focus {
-    background-image: url("assets/checkbox-unchecked.png");
-}
-
-check:disabled,
-check row:selected:disabled,
-check row:selected:focus:disabled {
-    background-image: url("assets/checkbox-unchecked-insensitive.png");
-}
-
-check:hover,
-check row:selected:hover,
-check row:selected:focus:hover {
-    background-image: url("assets/checkbox-unchecked-over.png");
-}
-
-check:active,
-check row:selected:active,
-check row:selected:focus:active {
-    background-image: url("assets/checkbox-checked.png");
-}
-
-check:active:hover,
-check row:selected:active:hover,
-check row:selected:focus:active:hover {
-    background-image: url("assets/checkbox-checked-over.png");
-}
-
-check:active:disabled,
-check row:selected:active:disabled,
-check row:selected:focus:active:disabled {
-    background-image: url("assets/checkbox-checked-insensitive.png");
-}
-
-check:indeterminated,
-check row:selected:indeterminated,
-check row:selected:focus:indeterminated {
-    background-image: url("assets/checkbox-mixed.png");
-}
-
-check:indeterminated:disabled,
-check row:selected:indeterminated:disabled,
-check row:selected:focus:indeterminated:disabled {
-    background-image: url("assets/checkbox-mixed-insensitive.png");
-}
-
-
-radio,
-.view.cellradio {
-    background-image: url("assets/radio-unselected.png");
-}
-
-radio:disabled {
-    background-image: url("assets/radio-unselected-insensitive.png");
-}
-
-radio:hover {
-    background-image: url("assets/radio-unselected-over.png");
-}
-
-radio:active {
-    background-image: url("assets/radio-selected.png");
-}
-
-radio:active:hover {
-    background-image: url("assets/radio-selected-over.png");
-}
-
-radio:active:disabled {
-    background-image: url("assets/radio-selected-insensitive.png");
-}
-
-radio:indeterminated {
-    background-image: url("assets/radio-mixed.png");
-}
-
-radio:indeterminated:disabled {
-    background-image: url("assets/radio-mixed-insensitive.png");
-}
-
-/********************************
- * Touch text selection handles *
- ********************************/
-/*cursor-handle.bottom {*/
-/*	background-image: url("assets/slider-horiz.png");*/
-/*}*/
-
-/*cursor-handle.top {*/
-/*	background-image: url("assets/slider-horiz.png");*/
-/*}*/
-
-/* menuitem */
-
-menuitem check:active {
-    background-image: url("assets/menuitem-checkbox-checked.png");
-}
-
-menuitem check:active:disabled {
-    background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
-}
-
-menuitem check:indeterminated,
-menuitem radio:indeterminated {
-    background-image: url("assets/menuitem-checkbox-mixed.png");
-}
-
-menuitem check:indeterminated:disabled,
-menuitem radio:indeterminated:disabled {
-    background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
-}
-
-menuitem radio:active {
-    background-image: url("assets/menuitem-radio-checked.png");
-}
-
-menuitem radio:active:disabled {
-    background-image: url("assets/menuitem-radio-checked-insensitive.png");
-}
-
 /*********************************
  * check and radio (gnome 3.18+) *
  *********************************/
 check,
 check row:selected,
 check row:selected:focus {
+    padding: 4px;
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
 }
 
@@ -168,6 +44,7 @@ check row:selected:focus:indeterminated:disabled {
 radio,
 radio row:selected,
 radio row:selected:focus {
+    padding: 4px;
     -gtk-icon-source: url("assets/radio-unselected.png");
 }
 
