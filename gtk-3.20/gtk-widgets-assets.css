@@ -7,6 +7,7 @@
 check,
 check row:selected,
 check row:selected:focus {
+    padding: 4px; /* avoid having things cluttered */
     background-image: url("assets/checkbox-unchecked.png");
 }
 
@@ -55,6 +56,7 @@ check row:selected:focus:indeterminated:disabled {
 
 radio,
 .view.cellradio {
+    padding: 4px; /* avoid having things cluttered */
     background-image: url("assets/radio-unselected.png");
 }
 
