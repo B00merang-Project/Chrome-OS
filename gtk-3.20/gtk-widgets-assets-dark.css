@@ -7,38 +7,37 @@ check,
 check row:selected,
 check row:selected:focus {
     padding: 4px;
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png"));
 }
 
 check:disabled,
 check row:selected:disabled,
 check row:selected:focus:disabled {
-    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive-dark.png");
 }
 
 check:active, check:checked,
 check row:selected:active, check row:selected:checked,
 check row:selected:focus:active, check row:selected:focus:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png"));
 }
 
 check:active:disabled, check:checked:disabled,
 check row:selected:active:disabled, check row:selected:checked:disabled,
 check row:selected:focus:active:disabled, check row:selected:focus:checked:disabled {
-    -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive-dark.png");
 }
-
 
 check:indeterminated,
 check row:selected:indeterminated,
 check row:selected:focus:indeterminated {
-    -gtk-icon-source: url("assets/checkbox-mixed.png");
+    -gtk-icon-source: url("assets/checkbox-mixed-dark.png");
 }
 
 check:indeterminated:disabled,
 check row:selected:indeterminated:disabled,
 check row:selected:focus:indeterminated:disabled {
-    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive-dark.png");
 }
 
 radio,
