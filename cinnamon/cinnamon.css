@@ -82,7 +82,7 @@
 #notification,
 .tile-preview.snap,
 .tile-hud.snap {
-    border: 1px solid #8c8c8c;
+    border: 1px solid #fff;
 }
 
 .window-caption, /* Open windows aka "exposé" */
@@ -234,7 +234,8 @@ StScrollBar StButton#hhandle {
     -boxpointer-gap: 0px;
 }
 
-.popup-menu {
+.popup-menu,
+.menu {
     font-size: 9.5pt;
     padding-left: 0px;
     padding-right: 0px;
@@ -243,11 +244,9 @@ StScrollBar StButton#hhandle {
     min-width: 250px;
     min-height: 80px;
     color: black;
-    box-shadow: 0 0 12px 1px rgba(0,0,0,0.8);
+    box-shadow: 0 0 12px 1px rgba(0,0,0,0.6);
 }
 
-.popup-sub-menu {
-}
 .popup-sub-menu .popup-menu-item:ltr {
     padding-right: 0em;
 }
@@ -281,7 +280,9 @@ StScrollBar StButton#hhandle {
     spacing: 1em;
 }
 .popup-submenu-menu-item:open {
-    background-color: rgba(0,0,0,0.3);
+}
+.popup-sub-menu {
+    border-image: url('submenu.png') 8;
 }
 .popup-menu-item:active {
     background-color: #3399ff;
@@ -331,20 +332,24 @@ StScrollBar StButton#hhandle {
 }
 /* Switches (to be used in menus) */
 .toggle-switch {
-    width: 40px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 .toggle-switch-us {
     background-image: url("checkbox-off.png");
+    background-size: cover;
 }
 .toggle-switch-us:checked {
     background-image: url("checkbox.png");
+    background-size: cover;
 }
 .toggle-switch-intl {
     background-image: url("checkbox-off.png");
+    background-size: cover;
 }
 .toggle-switch-intl:checked {
     background-image: url("checkbox.png");
+    background-size: cover;
 }
 .nm-menu-item-icons {
     spacing: .5em;
@@ -842,10 +847,11 @@ StScrollBar StButton#hhandle {
     spacing: 5px;
 }
 .run-dialog-entry {
-    border-image: url("entry.png") 2;
+    border-image: url("menu-entry.png") 8;
     font-size: 10.5pt;
     font-weight: normal;
     width: 23em;
+    padding: 8px;
     color: black;
     selection-background-color: white;
 }
@@ -858,6 +864,7 @@ StScrollBar StButton#hhandle {
     padding-left: 21px;
     padding-bottom: 15px;
     padding-top: 15px;
+    box-shadow: 0 0 8px 13px rgba(0,0,0,0.45);
 }
 .lightbox {
     background-color: rgba(0,0,0,0.5);
@@ -1256,9 +1263,9 @@ StScrollBar StButton#hhandle {
     padding-right: 30px;
 }
 #menu-search-entry {
-    padding: 5px;
+    padding: 8px;
     color: black;
-    border-image: url('entry.png') 2;
+    border-image: url('menu-entry.png') 6;
     caret-color: white;
     caret-size: 2px;
     width: 250px;

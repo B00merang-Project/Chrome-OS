@@ -534,6 +534,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
+    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
 .entry:active,
