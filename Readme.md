@@ -14,5 +14,7 @@
 - Clean and modern look
 - Compatibility with GTK 3.20 +
 - Material design effetcs! (thanks to Flat-Plat theme)
+
+### [Android theme available too!](https://github.com/B00merang-Project/Chrome-OS/tree/android) ###
  
 > ####Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html####
