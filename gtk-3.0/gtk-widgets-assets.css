@@ -87,7 +87,7 @@
 
 .titlebar .titlebutton.minimize {
     color: transparent;
-    background-color: @titlebar_bg_color;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
@@ -117,7 +117,7 @@
 
 .titlebar .titlebutton.maximize {
     color: transparent;
-    background-color: @titlebar_bg_color;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
@@ -147,7 +147,7 @@
 
 .titlebar .titlebutton.close {
     color: transparent;
-    background-color: @titlebar_bg_color;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
