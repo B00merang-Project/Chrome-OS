@@ -28,6 +28,7 @@
 }
 
 .popup-menu,
+.menu,
 .window-caption, /* Open windows aka "exposé" */
 .window-caption#selected,
 .desklet-with-borders,
@@ -733,7 +734,7 @@ StScrollBar StButton#hhandle {
     icon-size: 36px;
 }
 #notification StEntry {
-    padding: 4px;
+    padding: 10px 8px;
     color: black;
     border-image: url('entry.png') 2;
     caret-color: black;
@@ -851,7 +852,7 @@ StScrollBar StButton#hhandle {
     font-size: 10.5pt;
     font-weight: normal;
     width: 23em;
-    padding: 8px;
+    padding: 10px 8px;
     color: black;
     selection-background-color: white;
 }
@@ -1263,7 +1264,7 @@ StScrollBar StButton#hhandle {
     padding-right: 30px;
 }
 #menu-search-entry {
-    padding: 8px;
+    padding: 10px 8px;
     color: black;
     border-image: url('menu-entry.png') 6;
     caret-color: white;
@@ -1528,6 +1529,7 @@ StScrollBar StButton#hhandle {
     color: black;
     font-weight: normal;
     font-size: 26pt;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,0.6);
 }
 .expo-workspaces-name-entry {
     padding: 6px;
@@ -1665,11 +1667,13 @@ StScrollBar StButton#hhandle {
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,0.6);
 }
 .osd-window { /* Media key */
     color: black;
     padding: 20px;
     spacing: 5px;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,0.6);
 }
 .osd-window .level {
     height: 0.7em;
