@@ -295,6 +295,15 @@ button.default:active:hover {
     background-color: shade(@theme_selected_bg_color, 0.97);
 }
 
+/* flat button */
+button.flat,
+button.flat:checked {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
 /****************
  * cell and row *
  ****************/

@@ -13,20 +13,6 @@
     background-color: transparent;
 }
 
-#panelRight {
-    padding-right: 10px;
-    padding-left: 10px;
-    border-image: url('panel.png') 5 6 5 5;
-}
-
-#panelLeft {
-    padding-left: 6px;
-}
-
-#panelLeft .applet-box:first-child{
-    border-image: url('applet-box.png') 5 5 5 8;
-}
-
 .popup-menu,
 .menu,
 .window-caption, /* Open windows aka "exposé" */
@@ -365,17 +351,28 @@ StScrollBar StButton#hhandle {
     border: inset 0 rgba(0,0,0,0.9);
     border-bottom-width: 4px;
 }
-#panelLeft {
-    spacing: 0px;
-}
+
 #panelCenter {
     spacing: 0px;
     padding-left: 1px;
     padding-right: 1px;
 }
+
 #panelRight {
-    spacing: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-image: url('panel.png') 5 6 5 5;
 }
+
+#panelLeft {
+    padding-left: 6px;
+}
+
+#panelLeft .applet-box:first-child{
+    border-image: url('search.png') 5 5 5 8;
+    background-image: url('magnify.png');
+}
+
 #panelLeft:dnd {
     background-color: rgba(255,0,0,0.6);
 }
