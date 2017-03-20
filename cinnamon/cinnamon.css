@@ -369,6 +369,7 @@ StScrollBar StButton#hhandle {
 }
 
 #panelLeft .applet-box:first-child{
+    color: transparent;
     border-image: url('search.png') 5 5 5 8;
     background-image: url('magnify.png');
 }
