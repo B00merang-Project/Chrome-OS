@@ -17,4 +17,4 @@
 
 ### [Android theme available too!](https://github.com/B00merang-Project/Chrome-OS/tree/android) ###
  
-> ####Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html####
+> ### Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html
