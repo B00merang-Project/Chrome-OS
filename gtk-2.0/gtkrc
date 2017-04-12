@@ -3,7 +3,7 @@
 # date: November 4, 2015
 # description: Windows 10 Default white color
 
-gtk-color-scheme = "bg_color:#f1f1f1\nfg_color:#000\nbase_color:#ffffff\ntext_color:#000\nselected_bg_color:#4281f3\nselected_fg_color:#fff\ntooltip_bg_color:#000\ntooltip_fg_color:#fff\ntitlebar_bg_color:#f1f1f1\ntitlebar_bg_color2:#f1f1f1\ntitlebar_fg_color:#000\nmenubar_bg_color:#f1f1f1\nmenubar_fg_color:#000\ntoolbar_bg_color:#f1f1f1\ntoolbar_fg_color:#000\nmenu_bg_color:#f1f1f1\nmenu_fg_color:#000\npanel_bg_color:#b5adad\npanel_fg_color:#ffffff\nlink_color:#224ba0\nbg_color_dark:#000000\nfg_color_dark:#b7b7b7"
+gtk-color-scheme = "bg_color:#f1f1f1\nfg_color:#000\nbase_color:#ffffff\ntext_color:#000\nselected_bg_color:#2196f3\nselected_fg_color:#fff\ntooltip_bg_color:#000\ntooltip_fg_color:#fff\ntitlebar_bg_color:#fff\ntitlebar_bg_color2:#fff\ntitlebar_fg_color:#000\nmenubar_bg_color:#fff\nmenubar_fg_color:#000\ntoolbar_bg_color:#fff\ntoolbar_fg_color:#000\nmenu_bg_color:#fff\nmenu_fg_color:#000\npanel_bg_color:#b5adad\npanel_fg_color:#ffffff\nlink_color:#224ba0\nbg_color_dark:#000000\nfg_color_dark:#b7b7b7"
 
 # Default Style
 
@@ -39,8 +39,8 @@ style "murrine-default" {
 
 	GtkPaned::handle-size = 1
 
-	GtkProgressBar::min-horizontal-bar-height = 12
-	GtkProgressBar::min-vertical-bar-width = 12
+	GtkProgressBar::min-horizontal-bar-height = 4
+	GtkProgressBar::min-vertical-bar-width = 4
 
 	GtkRange::trough-border = 0
 	GtkRange::slider-width = 12
@@ -48,8 +48,8 @@ style "murrine-default" {
 	GtkRange::stepper_spacing = 0
 	GtkRange::trough-under-steppers = 1
 
-	GtkScale::slider-length = 7
-	GtkScale::slider-width = 19
+	GtkScale::slider-length = 14
+	GtkScale::slider-width = 14
 	GtkScale::trough-side-details = 1
 
 	GtkScrollbar::activate-slider = 1
@@ -129,6 +129,7 @@ style "murrine-default" {
 		colorize_scrollbar = FALSE
 		comboboxstyle = 0 # 0 = normal combobox, 1 = colorized combobox below arrow
 		contrast = 0.8 # overal contrast with borders
+		default_button_color = @selected_bg_color
 		focusstyle = 1 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
 		glazestyle = 0 # 0 = flat highlight, 1 = curved highlight, 2 = concave, 3 = top curved highlight, 4 = beryl highlight
 		glowstyle = 0 # 0 = glow on top, 1 = glow on bottom, 2 = glow on top and bottom, 3 = glow on middle vertically, 4 = glow on middle horizontally, 5 = glow on all sides
@@ -193,7 +194,7 @@ style "murrine-button"  = "murrine-wider" {
 	bg[INSENSITIVE] = shade (0.85, @bg_color)
 
   	engine "murrine" {
-		gradient_shades = { 0.95, 0.92, 0.91, 0.9 }
+#		gradient_shades = { 0.95, 0.92, 0.91, 0.9 }
 	}
 }
 
@@ -205,8 +206,8 @@ style "murrine-scrollbar" {
 	engine "murrine" {
 		roundness = 0
 		contrast = 0.0
-		border_shades = { 0.9, 0.9 }
-		trough_shades = { 0.9, 0.9 }
+#		border_shades = { 0.9, 0.9 }
+#		trough_shades = { 0.9, 0.9 }
 		trough_border_shades = { 1.0, 1.0 }
 	}
 }
@@ -226,7 +227,7 @@ style "murrine-scale" = "murrine-thin" {
 	bg[INSENSITIVE] = shade (0.95, @bg_color)
 
 	engine "murrine" {
-		roundness = 0
+		roundness = 16
 		gradient_shades = { 1.08, 1.08, 1.08, 1.08 }
 		border_shades = { 1.0, 1.0 }
 		trough_shades = { 1.08, 1.08 }
@@ -236,16 +237,16 @@ style "murrine-scale" = "murrine-thin" {
 
 style "progressbar" {
 	bg[NORMAL] = @bg_color
-	bg[ACTIVE] = shade( 0.9, @bg_color) #trough bg color
-	bg[SELECTED] = shade( 0.7, @bg_color) #progressbar bg color
+	bg[ACTIVE] = shade( 1.2, @bg_color) #trough bg color
+	bg[SELECTED] = @selected_bg_color #progressbar bg color
 	bg[PRELIGHT] = @selected_bg_color
 
 	fg[PRELIGHT] = @selected_fg_color
 
 	engine "murrine" {
-		roundness = 2
-		border_shades = { 1.2, 1.2 }
-		trough_border_shades = { 0.8, 0.8 }
+		roundness = 0
+#		border_shades = { 1.2, 1.2 }
+#		trough_border_shades = { 0.8, 0.8 }
 	}
 }
 
@@ -288,14 +289,15 @@ style "murrine-spinbutton" = "murrine-button" {
 }
 
 style "murrine-radiocheck" = "murrine-default" {
-	bg[SELECTED] = @base_color
+	bg[SELECTED] = @selected_bg_color
 
-	text[NORMAL] = @text_color
-	text[PRELIGHT] = shade (0.8, @selected_bg_color)
+	text[NORMAL] = @selected_fg_color
+#	text[PRELIGHT] = shade (0.8, @selected_bg_color)
 }
 
 style "murrine-entry" = "murrine-wider" {
 	engine "murrine" {
+        roundness = 0
 		border_shades = { 1.15, 1.15 }
 	}
 }
@@ -779,5 +781,5 @@ include "Apps/ff.rc"
 #include "Apps/filemanager.rc"
 #include "Apps/gnome-panel.rc"
 #include "Apps/panel-menus.rc"
-include "Apps/mintmenu.rc"
+#include "Apps/mintmenu.rc"
 include "Apps/xfce.rc"
