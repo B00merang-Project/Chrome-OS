@@ -14,7 +14,7 @@
     -GtkExpander-expander-size: 8;
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
-    -paned-handle-size: 2;
+    -GtkPaned-handle-size: 2;
     -progressbar-min-horizontal-bar-height: 4;
     -progressbar-min-vertical-bar-width: 4;
     -GtkRange-slider-width: 12;
@@ -26,7 +26,7 @@
     -GtkScrollbar-min-slider-length: 80;
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
+    -statusbar-shadow-type: none;
     -GtkTextView-error-underline-color: @error_color;
     -toolbutton-icon-spacing: 6;
     -GtkToolItemGroup-expander-size: 8;
@@ -566,6 +566,19 @@ entry progress {
     background-color: @bg_color;
     background-image: none;
     color: @progressbar_color;
+}
+
+/* nemo icon view entry */
+.nemo-window .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+    color: @theme_fg_color;
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_base_color; }
+  
+.nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 /************
@@ -1184,10 +1197,10 @@ popover separator,
     font-weight: bold;
 }
 
-popover.osd button,
-popover.osd button:active,
-popover.osd button:insensitive,
-GtkModelButtonbutton:checked:insensitive {
+modelbutton,
+modelbutton:active,
+modelbutton:insensitive,
+modelbutton:checked:insensitive {
     background-color: transparent;
     background-image: none;
     border-color: transparent;
@@ -1196,9 +1209,9 @@ GtkModelButtonbutton:checked:insensitive {
     color: @theme_fg_color;
 }
 
-popover.osd button:active:hover,
-popover.osd button:hover,
-popover.osd button:selected {
+modelbutton:active:hover,
+modelbutton:hover,
+modelbutton:selected {
     border-width: 0;
     border-color: transparent;
     background-color: @theme_selected_bg_color;
@@ -1363,6 +1376,10 @@ paned > separator {
     color: transparent;
 }
 
+paned .sideba+  paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
+    border-style: none; }r.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
+    border-style: none; }
+
 /************
  * GtkScale *
  ************/
@@ -1440,7 +1457,7 @@ scale slider {
     outline-color: rgba(46, 52, 54, 0.3);
     border-color: @theme_base_color;
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    -gtk-gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+    -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     background-image: linear-gradient(to bottom, @theme_base_color 20%, @theme_base_color 90%);
     box-shadow: 0 1px rgba(0, 0, 0, 0.1);
     border: 1px solid @theme_base_color;
@@ -1459,7 +1476,7 @@ scale slider {
       border-color: #b9b9b9;
       background-image: image(#b9b9b9);
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
       scale slider:insensitive label, scale slider:insensitive {
         color: transparent; }
@@ -1469,7 +1486,7 @@ scale slider {
       background-color: transparent;
       background-image: image(#d6d6d6);
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
       scale slider:backdrop label, scale slider:backdrop {
         color: @theme_insensitive_fg_color; }
@@ -1477,7 +1494,7 @@ scale slider {
         border-color: #b9b9b9;
         background-image: image(#b9b9b9);
         text-shadow: none;
-        -gtk-gtk-icon-shadow: none;
+        -gtk-icon-shadow: none;
         box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
         scale slider:backdrop:insensitive label, scale slider:backdrop:insensitive {
           color: #c3c3c0; }
@@ -1614,7 +1631,7 @@ scrollbar {
     background-image: none;
     box-shadow: inset 0 1px transparent;
     text-shadow: none;
-    -gtk-gtk-icon-shadow: none;
+    -gtk-icon-shadow: none;
     color: #787c7d; }
     scrollbar button:hover {
       border-color: transparent;
@@ -1622,7 +1639,7 @@ scrollbar {
       background-image: none;
       box-shadow: inset 0 1px transparent;
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       color: #535859; }
     scrollbar button:active, scrollbar button:checked {
       border-color: transparent;
@@ -1630,7 +1647,7 @@ scrollbar {
       background-image: none;
       box-shadow: inset 0 1px transparent;
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       color: @borders; }
     scrollbar button:insensitive {
       border-color: transparent;
@@ -1638,7 +1655,7 @@ scrollbar {
       background-image: none;
       box-shadow: inset 0 1px transparent;
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       color: rgba(120, 124, 125, 0.2); }
     scrollbar button:backdrop {
       border-color: transparent;
@@ -1646,7 +1663,7 @@ scrollbar {
       background-image: none;
       box-shadow: inset 0 1px transparent;
       text-shadow: none;
-      -gtk-gtk-icon-shadow: none;
+      -gtk-icon-shadow: none;
       color: #c3c4c4; }
       scrollbar button:backdrop:insensitive {
         border-color: transparent;
@@ -1654,7 +1671,7 @@ scrollbar {
         background-image: none;
         box-shadow: inset 0 1px transparent;
         text-shadow: none;
-        -gtk-gtk-icon-shadow: none;
+        -gtk-icon-shadow: none;
         color: rgba(195, 196, 196, 0.2); }
 
 treeview ~ scrollbar.vertical {
@@ -1664,30 +1681,45 @@ treeview ~ scrollbar.vertical {
 /*************
  * separator *
  *************/
-.sidebar.viewseparator,
+.sidebar.view separator,
 .separator,
-.viewseparator,
+.view separator,
 .separator,
 separator,
 .separator {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.9);
-    color: shade(@theme_bg_color, 0.9);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@theme_bg_color, 0.95));
+    background-size: 1px 1px;
 }
 
 button separator,
 .separator,
-buttonseparator,
+button > separator,
 .separator {
-    border-color: shade(@theme_bg_color, 0.95);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@theme_bg_color, 0.95));
+    background-size: 1px 1px;
 }
 
 button separator,
 .separator:insensitive,
-buttonseparator,
+button > separator,
 .separator:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@theme_bg_color, 0.85));
+    background-size: 1px 1px;
 }
 
 .primary-toolbar GtkSeparatorToolItem,
@@ -1700,10 +1732,13 @@ toolbar separator,
 .separator,
 toolbar separator,
 .separator:insensitive {
-    -GtkWidget-window-dragging: true;
-
-    border-color: shade(@toolbar_bg_color, 0.95);
-    color: shade(@toolbar_bg_color, 0.95);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@toolbar_bg_color, 0.95));
+    background-size: 1px 1px;
 }
 
 headerbar GtkSeparatorToolItem,
@@ -1716,10 +1751,14 @@ headerbar.titlebar separator,
 .separator,
 headerbar.titlebar separator,
 .separator:insensitive {
-    -GtkWidget-window-dragging: true;
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@tielebar_bg_color, 0.95));
+    background-size: 1px 1px;
 
-    border-color: shade(@titlebar_bg_color, 0.95);
-    color: shade(@titlebar_bg_color, 0.95);
 }
 
 /* add effect to header-bar */
@@ -1733,35 +1772,47 @@ headerbar.selection-mode button.suggested-action:active {
 
 toolbar.primary-toolbar button separator,
 .separator,
-toolbar.primary-toolbar buttonseparator,
+toolbar.primary-toolbar button separator,
 .separator,
 toolbar button separator,
 .separator,
-toolbar buttonseparator,
+toolbar button > separator,
 .separator {
-    border-color: shade(@toolbar_bg_color, 0.95);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@toolbar_bg_color, 0.95));
+    background-size: 1px 1px;
 }
 
 headerbar button separator,
 .separator,
-headerbar buttonseparator,
+headerbar button > separator,
 .separator,
 headerbar.titlebar button separator,
 .separator,
-headerbar.titlebar buttonseparator,
+headerbar.titlebar button > separator,
 .separator {
     border-color: shade(@titlebar_bg_color, 0.95);
 }
 
 toolbar.primary-toolbar button separator,
 .separator:insensitive,
-toolbar.primary-toolbar buttonseparator,
+toolbar.primary-toolbar button > separator,
 .separator:insensitive,
 toolbar button separator,
 .separator:insensitive,
-toolbar buttonseparator,
+toolbar button > separator,
 .separator:insensitive {
-    border-color: shade(@toolbar_bg_color, 0.85);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@toolbar_bg_color, 0.85));
+    background-size: 1px 1px;
 }
 
 headerbar button separator,
@@ -1772,23 +1823,29 @@ headerbar.titlebar button separator,
 .separator:insensitive,
 headerbar.titlebar button > separator,
 .separator:insensitive {
-    border-color: shade(@titlebar_bg_color, 0.85);
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: image(shade(@tielebar_bg_color, 0.85));
+    background-size: 1px 1px;
 }
 
 menuitem separator,
 .separator {
-
+    min-width: 1px;
+    min-height: 1px;
+    -gtk-icon-source: none;
     border-style: none;
-    color: shade(@menu_bg_color, 0.9);
+    background-color: transparent;
+    background-image: image(shade(@theme_bg_color, 0.85));
+    background-size: 1px 1px;
 }
 
 combobox separator,
 .separator {
-    /* always disable separators */
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
-
-    border-style: none;
+    background-image: none;
 }
 
 /***********
@@ -1848,88 +1905,61 @@ spinbutton {
     box-shadow: inset 0 0 shade(@theme_base_color, 0.9);
 }
 
-spinbutton:insensitive {
-    box-shadow: inset 0 0 shade(@theme_bg_color, 0.95);
+spinbutton button,
+spinbutton:focus button {
+    border-color: @theme_base_color;
 }
 
-spinbutton:active,
-spinbutton:hover {
-    color: @theme_fg_color;
-}
-
-spinbutton:first-child {
-    border-radius: 0px 0 0 0px;
+spinbutton entry {
     box-shadow: none;
+    border-color: @theme_base_color;
 }
 
-spinbutton:last-child {
-    border-radius: 0 0px 0px 0;
+spinbutton entry:disabled,
+spinbutton button:disabled {
+    border-color: shade(@theme_bg_color, 0.9);
 }
 
-spinbutton:dir(rtl) {
-    box-shadow: inset 0 0 shade(@theme_base_color, 0.9);
-}
-
-spinbutton.vertical button {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    border-radius: 0px;
-    background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
-    color: @theme_fg_color;
-    box-shadow: none;
-}
-
-spinbutton.vertical button:hover {
-    border-color: shade(@theme_bg_color, 0.7);
-    background-color: shade(@theme_bg_color, 1.10);
-    background-image: none;
-}
-
-spinbutton.vertical button:active {
-    border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 0.95);
-    background-image: none;
-}
-
-spinbutton.vertical button:active:hover {
-    border-color: shade(@theme_bg_color, 0.7);
-}
-
-spinbutton.vertical button:focus,
-spinbutton.vertical button:hover:focus,
-spinbutton.vertical button:active:focus,
-spinbutton.vertical button:active:hover:focus {
-    border-color: shade(@theme_bg_color, 0.7);
-}
-
-spinbutton.vertical button:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
-    background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
-}
-
-spinbutton.vertical button:first-child {
-    border-width: 1px;
+/* HORIZONTAL */
+spinbutton.horizontal entry {
     border-bottom-width: 0;
-    border-radius: 0px;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    padding: 7px 15px;
 }
 
-spinbutton.vertical button:last-child {
-    border-width: 1px;
-    border-top-width: 0;
-    border-radius: 0px;
+spinbutton.horizontal button.down {
+    border-radius: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    box-shadow: none;
+    margin-right: 0;
+}
+
+spinbutton.horizontal button.up {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+    box-shadow: none;
+}
+
+spinbutton.vertical entry {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+spinbutton.vertical button.up {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width: 0;
+    box-shadow: none;
+}
+
+spinbutton.vertical button.down {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-spinbutton.verticalentry {
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 0;
+    border-top-width: 0;
+    box-shadow: none;
 }
 
 /*********************
@@ -1951,9 +1981,13 @@ spinner {
 /*************
  * statusbar *
  *************/
-GtkStatusbar {
+statusbar {
     padding: 4px;
     color: @theme_fg_color;
+}
+
+statusbar > frame {
+    border: none;
 }
 
 /**********
@@ -2002,7 +2036,7 @@ switch {
     outline-color: transparent;
     border-color: #ececec;
     text-shadow: none;
-    -gtk-gtk-icon-shadow: none;
+    -gtk-icon-shadow: none;
     background-image: linear-gradient(to bottom, #ececec);
     box-shadow: 0 1px rgba(0, 0, 0, 0.1); }
   switch:hover slider {
@@ -2016,7 +2050,7 @@ switch {
     background-color: #b9b9b9;
     background-image: none;
     text-shadow: none;
-    -gtk-gtk-icon-shadow: none;
+    -gtk-icon-shadow: none;
     box-shadow: inset 0 1px transparent; }
     switch:insensitive slider label, switch:insensitive slider {
       color: @insensitive_fg_color; }
@@ -2025,7 +2059,7 @@ switch {
     background-color: transparent;
     background-image: image(shade(@theme_bg_color, 0.95));
     text-shadow: none;
-    -gtk-gtk-icon-shadow: none;
+    -gtk-icon-shadow: none;
     box-shadow: inset 0 1px transparent; }
     switch:backdrop slider label, switch:backdrop slider {
       color: transparent; }
@@ -2034,7 +2068,7 @@ switch {
     background-color: #b9b9b9;
     background-image: none;
     text-shadow: none;
-    -gtk-gtk-icon-shadow: none;
+    -gtk-icon-shadow: none;
     box-shadow: inset 0 1px transparent; }
     switch:backdrop:insensitive slider label, switch:backdrop:insensitive slider {
       color: transparent; }
@@ -2179,7 +2213,7 @@ headerbar {
 }
 
 headerbar button.text-button {
-    padding: 4px;
+    padding: 4px 15px;
 }
 
 headerbar button image-button {
@@ -2218,6 +2252,10 @@ headerbar button:checked {
     background-image: none;
 }
 
+headerbar button:checked:hover {
+    background-color: @theme_selected_bg_color;
+}
+
 headerbar button:active:hover {
     border-color: shade(@titlebar_bg_color, 0.7);
 }
@@ -2252,10 +2290,10 @@ headerbar entry selection:focus {
 
 button.titlebutton {
   border-width: 0;
-  background-color: @theme_base_color;
-  -gtk-gtk-icon-shadow: none; }
+  background-color: @titlebar_bg_color;
+  -gtk-icon-shadow: none; }
   button.titlebutton:backdrop {
-    -gtk-gtk-icon-shadow: none; }
+    -gtk-icon-shadow: none; }
 
 /***********
  * toolbar *
@@ -2294,7 +2332,7 @@ toolbarmenubar {
  *******************/
 .primary-toolbar,
 .primary-toolbar toolbar,
-.primary-toolbartoolbar {
+.primary-toolbar > toolbar {
     -GtkWidget-window-dragging: true;
 
     padding: 4px;
@@ -2308,7 +2346,7 @@ toolbarmenubar {
 
 .primary-toolbar combobox,
 toolbar.primary-toolbar button {
-    padding: 2px;
+    padding: 6px 12px;
     border-width: 0;
     border-color: transparent;
     border-radius: 0px;
@@ -2974,7 +3012,6 @@ headerbar .linked button:insensitive:only-child {
 /***********
  * tooltip *
  ***********/
-tooltip,
 tooltip {
     border-width: 1px;
     border-style: solid;
@@ -3629,6 +3666,21 @@ decoration {
 .window-frame.ssd:backdrop {
     background-color: @theme_bg_color;
 }
+
+/* CSD
+headerbar.default-decoration,
+headerbar.default-decoration:backdrop,
+.csd headerbar.default-decoration, 
+.csd headerbar.default-decoration:backdrop,
+.default-decoration.titlebar:not(headerbar),
+.default-decoration.titlebar:backdrop:not(headerbar),
+.csd .default-decoration.titlebar:not(headerbar),
+.csd .default-decoration.titlebar:backdrop:not(headerbar) {
+    min-height: 28px;
+    padding: 0 3px;
+    background-color: @theme_bg_color;
+    background-image: image(@theme_bg_color);
+    border-bottom-width: 0; } */
 
 /**************
  * over under *
