@@ -644,7 +644,7 @@ GtkScrolledWindowframe {
 
 /* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
-scrolledwindow viewportframe {
+scrolledwindow viewport frame {
     border-style: none;
 }
 
@@ -2416,7 +2416,7 @@ toolbar entry selection:focus {
 }
 
 /* inline-toolbar */
-.inline-toolbartoolbar {
+.inline-toolbar toolbar {
     -GtkToolbar-button-relief: normal;
 
     padding: 1px;
@@ -2428,7 +2428,7 @@ toolbar entry selection:focus {
     background-image: none;
 }
 
-.inline-toolbartoolbar:last-child {
+.inline-toolbar toolbar:last-child {
     border-width: 0 1px 1px 1px;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
@@ -2469,14 +2469,14 @@ toolbar.inline-toolbar button:active:hover:focus {
 }
 
 toolbar.inline-toolbar button:insensitive,
-.inline-toolbartoolbar toolbutton button:insensitive {
+.inline-toolbar toolbar toolbutton button:insensitive {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
 }
 
 toolbar.inline-toolbar button:active *:insensitive
-.inline-toolbartoolbar toolbutton button:active *:insensitive {
+.inline-toolbar toolbar toolbutton button:active *:insensitive {
     border-color: shade(@theme_bg_color, 0.75);
     background-color: shade(@theme_bg_color, 0.80);
     background-image: none;
@@ -2488,15 +2488,15 @@ toolbar.inline-toolbar button:active *:insensitive
 /* set up shadows for visual separation */
 .linked button,
 toolbar.inline-toolbar button,
-.inline-toolbartoolbar toolbutton button,
-.inline-toolbartoolbar toolbutton > button {
+.inline-toolbar toolbar toolbutton button,
+.inline-toolbar toolbar toolbutton > button {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.9);
 }
 
 .linked button:active,
 toolbar.inline-toolbar button:active,
-.inline-toolbartoolbar toolbutton button:active,
-.inline-toolbartoolbar toolbutton > button:active {
+.inline-toolbar toolbar toolbutton button:active,
+.inline-toolbar toolbar toolbutton > button:active {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.9),
                 inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
@@ -2505,8 +2505,8 @@ toolbar.inline-toolbar button:active,
 
 .linked button:insensitive,
 toolbar.inline-toolbar button:insensitive,
-.inline-toolbartoolbar toolbutton button:insensitive,
-.inline-toolbartoolbar toolbutton > button:insensitive {
+.inline-toolbar toolbar toolbutton button:insensitive,
+.inline-toolbar toolbar toolbutton > button:insensitive {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.85);
 }
 
@@ -2523,12 +2523,12 @@ toolbar.inline-toolbar button:insensitive:last-child,
 toolbar.inline-toolbar button:insensitive:only-child,
 toolbar.inline-toolbar button:active *:insensitive:last-child,
 toolbar.inline-toolbar button:active *:insensitive:only-child,
-.inline-toolbartoolbar toolbutton:last-child > button,
-.inline-toolbartoolbar toolbutton:only-child > button,
-.inline-toolbartoolbar toolbutton:last-child > button:insensitive,
-.inline-toolbartoolbar toolbutton:only-child > button:insensitive,
-.inline-toolbartoolbar toolbutton:last-child > button:active *:insensitive,
-.inline-toolbartoolbar toolbutton:only-child > button:active *:insensitive {
+.inline-toolbar toolbar toolbutton:last-child > button,
+.inline-toolbar toolbar toolbutton:only-child > button,
+.inline-toolbar toolbar toolbutton:last-child > button:insensitive,
+.inline-toolbar toolbar toolbutton:only-child > button:insensitive,
+.inline-toolbar toolbar toolbutton:last-child > button:active *:insensitive,
+.inline-toolbar toolbar toolbutton:only-child > button:active *:insensitive {
     box-shadow: none;
 }
 
@@ -2537,8 +2537,8 @@ toolbar.inline-toolbar button:active *:insensitive:only-child,
 .linked button:active:only-child,
 toolbar.inline-toolbar button:active:last-child,
 toolbar.inline-toolbar button:active:only-child,
-.inline-toolbartoolbar toolbutton:last-child > button:active,
-.inline-toolbartoolbar toolbutton:only-child > button:active {
+.inline-toolbar toolbar toolbutton:last-child > button:active,
+.inline-toolbar toolbar toolbutton:only-child > button:active {
     box-shadow: inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
                 inset 0 0 alpha(@dark_shadow, 0.07);
@@ -2555,9 +2555,9 @@ toolbar.inline-toolbar button:active:only-child,
 toolbar.inline-toolbar button,
 toolbar.inline-toolbar button:active,
 toolbar.inline-toolbar button:insensitive,
-.inline-toolbartoolbar toolbutton button,
-.inline-toolbartoolbar toolbutton button:active,
-.inline-toolbartoolbar toolbutton button:insensitive {
+.inline-toolbar toolbar toolbutton button,
+.inline-toolbar toolbar toolbutton button:active,
+.inline-toolbar toolbar toolbutton button:insensitive {
     border-width: 0px;
     border-radius: 0;
 /*    border-right-width: 0;
@@ -2573,9 +2573,9 @@ toolbar.inline-toolbar button:insensitive,
 toolbar.inline-toolbar button:first-child,
 toolbar.inline-toolbar button:active:first-child,
 toolbar.inline-toolbar button:insensitive:first-child,
-.inline-toolbartoolbar toolbutton:first-child button,
-.inline-toolbartoolbar toolbutton:first-child button:active,
-.inline-toolbartoolbar toolbutton:first-child button:insensitive {
+.inline-toolbar toolbar toolbutton:first-child button,
+.inline-toolbar toolbar toolbutton:first-child button:active,
+.inline-toolbar toolbar toolbutton:first-child button:insensitive {
     border-width: 0px;
     border-radius: 2px;
     border-right-width: 0;
@@ -2593,9 +2593,9 @@ toolbar.inline-toolbar button:insensitive:first-child,
 toolbar.inline-toolbar button:last-child,
 toolbar.inline-toolbar button:active:last-child,
 toolbar.inline-toolbar button:insensitive:last-child,
-.inline-toolbartoolbar toolbutton:last-child button,
-.inline-toolbartoolbar toolbutton:last-child button:active,
-.inline-toolbartoolbar toolbutton:last-child button:insensitive {
+.inline-toolbar toolbar toolbutton:last-child button,
+.inline-toolbar toolbar toolbutton:last-child button:active,
+.inline-toolbar toolbar toolbutton:last-child button:insensitive {
     border-width: 0px;
     border-radius: 2px;
     border-left-width: 0;
@@ -2613,23 +2613,23 @@ toolbar.inline-toolbar button:insensitive:last-child,
 toolbar.inline-toolbar button:only-child,
 toolbar.inline-toolbar button:active:only-child,
 toolbar.inline-toolbar button:insensitive:only-child,
-.inline-toolbartoolbar toolbutton:only-child button,
-.inline-toolbartoolbar toolbutton:only-child button:active,
-.inline-toolbartoolbar toolbutton:only-child button:insensitive {
+.inline-toolbar toolbar toolbutton:only-child button,
+.inline-toolbar toolbar toolbutton:only-child button:active,
+.inline-toolbar toolbar toolbutton:only-child button:insensitive {
     border-width: 0px;
     border-radius: 2px;
 }
 
 /* linked button shadows (vertical) */
 .linked.vertical button,
-.inline-toolbartoolbar.vertical button,
-.inline-toolbartoolbar.vertical toolbutton > button {
+.inline-toolbar toolbar.vertical button,
+.inline-toolbar toolbar.vertical toolbutton > button {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.9);
 }
 
 .linked.vertical button:active,
-.inline-toolbartoolbar.vertical button:active,
-.inline-toolbartoolbar.vertical toolbutton > button:active {
+.inline-toolbar toolbar.vertical button:active,
+.inline-toolbar toolbar.vertical toolbutton > button:active {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.9),
                 inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
@@ -2637,8 +2637,8 @@ toolbar.inline-toolbar button:insensitive:only-child,
 }
 
 .linked.vertical button:insensitive,
-.inline-toolbartoolbar.vertical button:insensitive,
-.inline-toolbartoolbar.vertical toolbutton > button:insensitive {
+.inline-toolbar toolbar.vertical button:insensitive,
+.inline-toolbar toolbar.vertical toolbutton > button:insensitive {
     box-shadow: inset 0 0 shade(@theme_bg_color, 0.85);
 }
 
@@ -2649,28 +2649,28 @@ toolbar.inline-toolbar button:insensitive:only-child,
 .linked.vertical button:insensitive:only-child,
 .linked.vertical button:active *:insensitive:last-child,
 .linked.vertical button:active *:insensitive:only-child,
-.inline-toolbartoolbar.vertical button:last-child,
-.inline-toolbartoolbar.vertical button:only-child,
-.inline-toolbartoolbar.vertical button:insensitive:last-child,
-.inline-toolbartoolbar.vertical button:insensitive:only-child,
-.inline-toolbartoolbar.vertical button:active *:insensitive:last-child,
-.inline-toolbartoolbar.vertical button:active *:insensitive:only-child,
-.inline-toolbartoolbar.vertical toolbutton:last-child > button,
-.inline-toolbartoolbar.vertical toolbutton:only-child > button,
-.inline-toolbartoolbar.vertical toolbutton:last-child > button:insensitive,
-.inline-toolbartoolbar.vertical toolbutton:only-child > button:insensitive,
-.inline-toolbartoolbar.vertical toolbutton:last-child > button:active *:insensitive,
-.inline-toolbartoolbar.vertical toolbutton:only-child > button:active *:insensitive {
+.inline-toolbar toolbar.vertical button:last-child,
+.inline-toolbar toolbar.vertical button:only-child,
+.inline-toolbar toolbar.vertical button:insensitive:last-child,
+.inline-toolbar toolbar.vertical button:insensitive:only-child,
+.inline-toolbar toolbar.vertical button:active *:insensitive:last-child,
+.inline-toolbar toolbar.vertical button:active *:insensitive:only-child,
+.inline-toolbar toolbar.vertical toolbutton:last-child > button,
+.inline-toolbar toolbar.vertical toolbutton:only-child > button,
+.inline-toolbar toolbar.vertical toolbutton:last-child > button:insensitive,
+.inline-toolbar toolbar.vertical toolbutton:only-child > button:insensitive,
+.inline-toolbar toolbar.vertical toolbutton:last-child > button:active *:insensitive,
+.inline-toolbar toolbar.vertical toolbutton:only-child > button:active *:insensitive {
     box-shadow: none;
 }
 
 /* add back the inset shadow effect */
 .linked.vertical button:active:last-child,
 .linked.vertical button:active:only-child,
-.inline-toolbartoolbar.vertical button:active:last-child,
-.inline-toolbartoolbar.vertical button:active:only-child,
-.inline-toolbartoolbar.vertical toolbutton:last-child > button:active,
-.inline-toolbartoolbar.vertical toolbutton:only-child > button:active {
+.inline-toolbar toolbar.vertical button:active:last-child,
+.inline-toolbar toolbar.vertical button:active:only-child,
+.inline-toolbar toolbar.vertical toolbutton:last-child > button:active,
+.inline-toolbar toolbar.vertical toolbutton:only-child > button:active {
     box-shadow: inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
                 inset 0 0 alpha(@dark_shadow, 0.07);
@@ -3045,7 +3045,7 @@ treeview entry {
 /************
  * viewport *
  ************/
-GtkViewportframe {
+viewport frame {
     border-width: 0;
 }
 
