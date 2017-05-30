@@ -1,8 +1,6 @@
-/* Chromium OS theme */
-
-/*********************************
- * check and radio (gnome 3.18+) *
- *********************************/
+/*******************
+ * check and radio *
+ *******************/
 check,
 check row:selected,
 check row:selected:focus {
@@ -85,7 +83,7 @@ radio row:selected:focus:indeterminated:disabled {
 menuitem check {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"));
 	color: @theme_fg_color;
-	icon-shadow: none; 
+	-gtk-icon-shadow: none; 
 }
 menuitem check:active, menuitem check:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"));
@@ -104,7 +102,7 @@ menuitem check:disabled {
 menuitem radio {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-unselected.png"));
 	color: @theme_fg_color;
-	icon-shadow: none; 
+	-gtk-icon-shadow: none; 
 }
 menuitem radio:active, menuitem radio:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-selected.png"));
