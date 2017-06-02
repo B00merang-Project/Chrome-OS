@@ -480,11 +480,11 @@ label:disabled {
 /****************
  * drawing area *
  ****************/
-GtkDrawingArea {
+drawingarea {
     background-color: @theme_base_color;
 }
 
-GtkDrawingArea:disabled {
+drawingarea:disabled {
     background-color: shade(@theme_base_color, 0.9);
 }
 
@@ -626,19 +626,30 @@ entry progress {
 /************
  * expander *
  ************/
+expander arrow {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+expander arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+expander arrow:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 expander {
     color: alpha(currentColor, 0.7);
-    border: alpha(currentColor, 0.7);
 }
 
 expander:hover {
     color: alpha(currentColor, 0.8);
-    border-color: alpha(currentColor, 0.8);
 }
 
-expander:active {
+expander:checked {
     color: alpha(currentColor, 0.9);
-    border-color: alpha(currentColor, 0.9);
 }
 
 /**************
@@ -1021,8 +1032,16 @@ grip {
     background-color: transparent;
 }
 
-.arrow {
+arrow,
+combobox arrow {
     color: alpha(currentColor, 0.7);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    min-height: 16px;
+    min-width: 16px;
+}
+
+combobox:drop(active) {
+    box-shadow: none;
 }
 
 /********
@@ -1147,6 +1166,25 @@ menu menuitem *:active,
 menu menuitem:hover,
 menu menuitem *:hover {
     color: @theme_selected_fg_color;
+}
+
+/* menu arrow */
+menu menuitem arrow,
+.menu menuitem arrow {
+    min-height: 16px;
+    min-width: 16px;
+}
+
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    margin-left: 10px;
+}
+
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+    margin-right: 10px;
 }
 
 menuitem check,
@@ -1331,7 +1369,7 @@ notebook tab label {
 }
 
 notebook tab {
-    color: shade (@bg_color, 0.48);
+    color: alpha(@theme_fg_color, 0.5);
 }
 
 notebook header.top tab:checked {
@@ -1378,8 +1416,8 @@ notebook tab button {
     padding: 0;
 }
 
-notebook GtkDrawingArea {
-        background-color: shade (@bg_color, 1.02);
+notebook drawingarea {
+    background-color: shade(@theme_bg_color, 1.02);
 }
 
 notebookframe {
