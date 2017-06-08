@@ -1,6 +1,6 @@
 # Chrome OS's theme for Linux
 
-![chromeos-theme](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-10-18-16-18-36_orig.png)
+![chromeos-theme](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-24-08-20-40-orig_orig.png)
 
 **Maintainer:** [Elbullazul](https://github.com/elbullazul)
 
