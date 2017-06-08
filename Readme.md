@@ -1,6 +1,7 @@
 # Chrome OS theme for Linux
 
 Material designed theme based on Chrome OS 53
+
 ![chromeos-theme](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-24-08-20-40-orig_orig.png)
 
 ### [Android theme available too!](https://github.com/B00merang-Project/Android) ###
