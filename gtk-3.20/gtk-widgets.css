@@ -1565,9 +1565,9 @@ paned .sidebar {
  ************/
 scale fill,
 scale trough {
-    border: 1px solid shade(@theme_bg_color, 0.8);
+    border: none;
     border-radius: 0;
-    background-color: @theme_bg_color;
+    background-color: alpha(@theme_fg_color, 0.3);
 }
 
 scale fill:disabled,
@@ -1581,7 +1581,6 @@ scale trough:backdrop,
 progressbar trough:backdrop,
 progressbar:backdrop trough {
     background-color: shade(@theme_bg_color, 0.9);
-    border-color: shade(@theme_bg_color, 0.8);
     transition: 200ms ease-out;
 }
 
@@ -1590,21 +1589,6 @@ scale trough:backdrop:disabled,
 progressbar trough:backdrop:disabled,
 progressbar:backdrop trough:disabled {
     background-color: shade(@theme_bg_color, 0.8);
-}
-
-row:selected scale fill,
-scale row:selected fill,
-row:selected scale trough,
-scale row:selected trough,
-row:selected progressbar trough,
-progressbar row:selected trough,
-row:selected scale fill:disabled,
-scale row:selected fill:disabled,
-row:selected scale trough:disabled,
-scale row:selected trough:disabled,
-row:selected progressbar trough:disabled,
-progressbar row:selected trough:disabled {
-    border-color: shade(@theme_selected_bg_color, 1);
 }
 
 progressbar trough {
@@ -1693,7 +1677,6 @@ scale fill:backdrop {
 
 scale fill:disabled,
 scale fill:disabled:backdrop {
-    border-color: transparent;
     background-color: @theme_base_color;
 }
 
@@ -1993,7 +1976,7 @@ scrollbar button:active, scrollbar button:checked {
     box-shadow: inset 0 1px transparent;
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: @borders;
+    color: @theme_fg_color;
 }
 
 scrollbar button:disabled {
@@ -2027,7 +2010,7 @@ scrollbar button:backdrop:disabled {
 }
 
 treeview ~ scrollbar.vertical {
-      border-top: 1px solid @borders;
+      border-top: 1px solid @theme_fg_color;
       margin-top: -1px;
 }
 
@@ -2727,17 +2710,15 @@ toolbar.primary-toolbar button {
     color: @toolbar_fg_color;
 }
 
-/* Nemo < > ^ buttons */
-
 toolbar.primary-toolbar button.raised,
-.primary-toolbar .raisedbutton,
+.primary-toolbar .raised button,
 toolbar combobox,
 toolbar button {
+    padding: 6px 12px;
     border-color: transparent;
     background-color: @dark_bg_color;
     background-image: none;
     color: @toolbar_fg_color;
-    padding: 6px;
 }
 
 toolbar.primary-toolbar button:hover,
@@ -2746,6 +2727,7 @@ combobox button.combo:hover {
 }
 
 toolbar.primary-toolbar button:active,
+toolbar.primary-toolbar button:checked,
 combobox button.combo:checked {
     background-color: @dark_bg_color;
     background-image: none;
