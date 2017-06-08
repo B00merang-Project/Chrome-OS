@@ -13,8 +13,8 @@
 - Specially crafted Cinnamon theme 
 - Clean and modern look
 - Compatibility with GTK 3.20 +
-- Material design effetcs! (thanks to Flat-Plat theme)
+- Material design effects! (thanks to Flat-Plat theme)
 
-### [Android theme available too!](https://github.com/B00merang-Project/Chrome-OS/tree/android) ###
+### [Android theme available too!](https://github.com/B00merang-Project/Android) ###
  
-> ### Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html
+> **Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html**
