@@ -715,7 +715,7 @@ row.activatable:active, .view:active, treeview header button:active, placessideb
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
