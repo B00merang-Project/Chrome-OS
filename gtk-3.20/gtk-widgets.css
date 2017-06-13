@@ -722,6 +722,12 @@ frame > border {
     border-radius: 0;
 }
 
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -1351,6 +1357,14 @@ popover.background radiobutton:selected {
 .menuitem.button.flat:hover,
 popover.background radiobutton:hover, {
     background-color: shade(@theme_bg_color, 0.95);
+}
+
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 /************
