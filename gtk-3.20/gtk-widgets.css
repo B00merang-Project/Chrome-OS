@@ -1211,8 +1211,8 @@ menu menuitem *:disabled {
 /* menu arrow */
 menu menuitem arrow,
 .menu menuitem arrow {
-    min-height: 16px;
-    min-width: 16px;
+    min-height: 10px;
+    min-width: 10px;
 }
 
 menu menuitem arrow:dir(ltr),
