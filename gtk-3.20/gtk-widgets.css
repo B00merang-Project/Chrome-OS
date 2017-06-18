@@ -1179,7 +1179,7 @@ treemenu menuitem {
 
 menuitem,
 menu menuitem {
-    padding: 6px;
+    padding: 3px 8px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
