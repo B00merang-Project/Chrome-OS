@@ -1149,7 +1149,7 @@ menubar {
  ***************/
 menubar > menuitem,
 menubar menuitem {
-    padding: 6px 8px;
+    padding: 3px 5px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -1177,9 +1177,9 @@ treemenu menuitem {
     border-width: 0;
 }
 
-menu ­> menuitem,
+menu > menuitem,
 menu menuitem {
-    padding: 3px 5px;
+    padding: 6px 8px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
