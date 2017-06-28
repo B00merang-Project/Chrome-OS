@@ -1177,9 +1177,9 @@ treemenu menuitem {
     border-width: 0;
 }
 
-menuitem,
+menu ­> menuitem,
 menu menuitem {
-    padding: 3px 8px;
+    padding: 3px 5px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
