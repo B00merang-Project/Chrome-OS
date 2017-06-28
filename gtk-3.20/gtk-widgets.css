@@ -1149,7 +1149,7 @@ menubar {
  ***************/
 menubar > menuitem,
 menubar menuitem {
-    padding: 3px 5px;
+    padding: 6px 8px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
