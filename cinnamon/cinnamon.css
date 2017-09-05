@@ -1308,21 +1308,21 @@ StScrollBar StButton#hhandle {
     min-width: 5px;
 }
 .window-list-item-box {
-    color: black;
+    color: #fff;
     padding-left: 0px;
     padding-right: 0px;
     transition-duration: 50;
     border-image: url('active.png') 4 4 4 4;
 }
 .window-list-item-box:hover    {
-    color: black;
+    color: #fff;
     padding-left: 0px;
     padding-right: 0px;
 }
 .window-list-item-box:active,
 .window-list-item-box:checked,
 .window-list-item-box:focus    {
-    color: black;
+    color: #fff;
     padding-left: 0px;
     padding-right: 0px;
     border-image: url('active2.png') 4 4 4 4;
@@ -1330,13 +1330,13 @@ StScrollBar StButton#hhandle {
 .window-list-item-box:checked:hover,
 .window-list-item-box:focus:hover,
 .window-list-item-box:active:hover  {
-    color: black;
+    color: #fff;
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .window-list-item-demands-attention {
-    color: black;
+    color: #fff;
     padding-left: 0px;
     padding-right: 0px;
 }
