@@ -2429,7 +2429,7 @@ switch:backdrop:disabled slider {
 /************
  * textview *
  ************/
-GtkTextView {
+textview {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
@@ -2656,8 +2656,14 @@ button.titlebutton {
   -gtk-icon-shadow: none;
 }
 
-  button.titlebutton:backdrop {
+button.titlebutton:backdrop {
     -gtk-icon-shadow: none;
+}
+
+headerbar switch {
+    border-color: @titlebar_bg_color;
+    box-shadow: inset 0 0 0 3px @titlebar_bg_color;
+    margin: 3px;
 }
 
 /***********
