@@ -2338,7 +2338,6 @@ switch {
     font-size: 0;
     outline-offset: -4px;
     border: 1px solid @theme_bg_color;
-    box-shadow: inset 0 0 0 3px @theme_bg_color;
     border-radius: 16px;
     background-color: mix(@theme_bg_color, @theme_fg_color, 0.3);
 }
@@ -2371,7 +2370,9 @@ switch:backdrop:disabled {
 }
 
 switch slider {
-    margin: 0;
+    margin: -2px;
+    margin-top: -3px;
+    margin-bottom: -3px;
     min-width: 25px;
     min-height: 24px;
     border: none;
