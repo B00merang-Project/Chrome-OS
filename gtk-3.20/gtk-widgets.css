@@ -707,6 +707,10 @@ statusbar frame > border {
     border: none;
 }
 
+.frame {
+	background: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -2339,6 +2343,7 @@ switch {
     outline-offset: -4px;
     border: 1px solid @theme_bg_color;
     border-radius: 16px;
+    margin: 7px;
     background-color: mix(@theme_bg_color, @theme_fg_color, 0.3);
 }
 
@@ -2659,12 +2664,6 @@ button.titlebutton {
 
 button.titlebutton:backdrop {
     -gtk-icon-shadow: none;
-}
-
-headerbar switch {
-    border-color: @titlebar_bg_color;
-    box-shadow: inset 0 0 0 3px @titlebar_bg_color;
-    margin: 3px;
 }
 
 /***********
@@ -3384,13 +3383,27 @@ headerbar .linked button:disabled:only-child {
  * tooltip *
  ***********/
 tooltip {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_tooltip_bg_color, 0.8);
-    border-radius: 0px;
-    background-color: @theme_tooltip_bg_color;
-    background-image: none;
-    color: @theme_tooltip_fg_color;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+tooltip.background {
+    border: 1px solid shade(@tooltip_bg_color, 0.8);
+    background-color: @tooltip_bg_color;
+    background-clip: padding-box;
+}
+
+tooltip.background label {
+    padding: 1px;
+}
+
+tooltip decoration {
+    background-color: transparent;
+}
+
+tooltip * {
+    background-color: transparent;
+    color: @tooltip_fg_color;
 }
 
 /************
