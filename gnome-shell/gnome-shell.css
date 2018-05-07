@@ -741,13 +741,20 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: #000;
+  background-color: transparent;
   font-weight: bold;
   height: 32px; }
+  #panel.solid {
+    background-color: transparent;
+    background-gradient-direction: none;
+  }
   #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
     background-color: transparent; }
   #panel #panelLeft, #panel #panelCenter {
     spacing: 0; }
+    #panelRight {
+        background-color: rgba(0,0,0,0.85);
+    }
   #panel .panel-corner {
     -panel-corner-radius: 0;
     -panel-corner-background-color: rgba(0, 0, 0, 0.6);
@@ -762,7 +769,7 @@ StScrollBar {
   #panel .panel-button {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
-    font-weight: bold;
+    font-weight: normal;
     color: rgba(255, 255, 255, 0.9);
     transition-duration: 0.2s; }
     #panel .panel-button .app-menu-icon {
@@ -1420,6 +1427,10 @@ StScrollBar {
 
 .app-well-app.app-folder > .overview-icon {
   background-color: rgba(255, 255, 255, 0.1); }
+
+.show-apps {
+  background-color: rgba(0,0,0,0.85);
+}
 
 .show-apps .show-apps-icon {
   color: rgba(255, 255, 255, 0.75); }

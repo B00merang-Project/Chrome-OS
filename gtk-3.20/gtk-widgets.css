@@ -393,16 +393,15 @@ checkbutton:selected:focus {
 /*****************
  * column-header *
  *****************/
-treeview header button,
-treeview header button:active {
+treeview header button {
     border-width: 0 1px 1px 0;
     border-radius: 0;
     padding: 10px 15px;
 }
 
 treeview header button,
-treeview header button:active,
 treeview header button:focus,
+treeview header button:active,
 treeview header button:active:focus {
     border-color: shade(@theme_base_color, 0.9);
     border-bottom-color: shade(@theme_base_color, 0.8);
@@ -411,8 +410,8 @@ treeview header button:active:focus {
 }
 
 treeview header button:hover,
-treeview header button:active:hover,
 treeview header button:hover:focus,
+treeview header button:active:hover,
 treeview header button:active:hover:focus {
     border-color: shade(@theme_base_color, 0.9);
     border-bottom-color: shade(@theme_base_color, 0.8);
@@ -532,27 +531,13 @@ calendar.highlight {
 /******************
  * combobox entry *
  ******************/
-.primary-toolbar combobox.combobox-entry entry,
-.primary-toolbar combobox.combobox-entry entry:active,
-.primary-toolbar combobox.combobox-entry entry selection:focus,
-.primary-toolbar combobox.combobox-entry entry:disabled,
-combobox.combobox-entry entry,
-combobox.combobox-entry entry:active,
-combobox.combobox-entry entry selection:focus,
-combobox.combobox-entry entry:disabled {
+combobox entry {
     border-width: 1px 0 1px 1px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.primary-toolbar comboboxcombobox entry button,
-.primary-toolbar comboboxtoolbar.primary-toolbar button:hover,
-.primary-toolbar comboboxcombobox entry button:active,
-.primary-toolbar comboboxtoolbar combobox button.combo:disabled,
-comboboxcombobox entry button,
-comboboxtoolbar.primary-toolbar button:hover,
-comboboxcombobox entry button:active,
-comboboxtoolbar combobox button.combo:disabled {
+combobox button {
     border-width: 1px 1px 1px 1px;
     border-bottom-left-radius: 0;
     border-style: inset;
@@ -577,25 +562,23 @@ combobox:drop(active) {
   box-shadow: none;
 }
 
-
 /*********
  * entry *
  *********/
 entry {
     padding: 8px 6px;
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    border-radius: 0px;
-    background-color: @theme_base_color;
+    border-radius: 3px;
+    background-color: @text_entry_bg_color;
     background-image: none;
     color: @theme_text_color;
-    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
-entry:active,
-entry selection:focus {
-    border-color: shade(@theme_bg_color, 0.7);
+entry:focus, 
+entry:active {
+    box-shadow: inset 0 -2px @theme_selected_bg_color;
 }
 
 entry selection,
@@ -607,7 +590,7 @@ entry:selected:focus {
 }
 
 entry:disabled {
-    background-color: shade(@theme_bg_color, 0.95);
+    background-color: shade(@text_entry_bg_color, 1.05);
     background-image: none;
     color: mix(@theme_text_color, @theme_base_color, 0.5);
 }
@@ -622,6 +605,7 @@ entry progress {
 
 entry entry {
     box-shadow: none;
+    background: none;
 }
 
 /* nemo icon view entry */
@@ -1405,6 +1389,7 @@ notebook > frame {
 
 notebook > header {
     border-width: 0;
+    background: @theme_bg_color;
 }
 
 notebook > header > frame {
@@ -1414,24 +1399,19 @@ notebook > header > frame {
 
 notebook > stack:not(:only-child) {
     background-color: @theme_base_color;
-    border: 1px solid shade(@theme_bg_color, 0.9);
+    border: 1px solid @theme_base_color;
     box-shadow: none;
 }
 
 notebook tab {
     background-image: none;
-    background-color: shade(@theme_bg_color, 0.9);
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    border-width: 1px;
-    border-radius: 0px;
+    border: none;
+    border-radius: 6px;
     box-shadow: none;
 }
 
 notebook tab:checked {
-    border-color: shade (@theme_bg_color, 0.82);
-    border-style: solid;
-    border-width: 1px;
+    border: none;
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_fg_color;
@@ -1448,46 +1428,49 @@ notebook tab {
 }
 
 notebook header.top tab:checked {
-    box-shadow: 0 2px @theme_selected_bg_color;
+    box-shadow: 0 1px @theme_base_color;
 }
 
 notebook header.top tab {
     padding: 2px 5px 0 5px;
     border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 notebook header.right tab:checked {
     background-image: none;
-    background-color: @theme_base_color;
-    box-shadow: -2px 0 @theme_selected_bg_color;
+    box-shadow: -1px 0 @theme_base_color;
 }
 
 notebook header.right tab {
     padding: 3px 4px 3px 0;
-    border-image-width: 1px 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     border-left-width: 0;
 }
 
 notebook header.bottom tab:checked {
     background-image: none;
-    background-color: @theme_base_color;
-    box-shadow: 0 -2px @theme_selected_bg_color;
+    box-shadow: 0 -1px @theme_base_color;
 }
 
 notebook header.bottom tab {
     padding: 0 5px 3px 5px;
-    border-image-width: 0 1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-top-width: 0;
 }
 
 notebook header.left tab:checked {
     background-image: none;
-    background-color: @theme_base_color;
-    box-shadow: 2px 0 @theme_selected_bg_color;
+    box-shadow: 1px 0 @theme_base_color;
 }
 
 notebook header.left tab {
-    border-image-width: 1px 0;
+    padding: 3px 0 3px 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     border-right-width: 0;
 }
 
@@ -1728,7 +1711,7 @@ scale slider {
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     background-image: linear-gradient(to bottom, @theme_base_color 20%, @theme_base_color 90%);
-    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
     border: 1px solid @theme_base_color;
     border-radius: 100%;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1869,7 +1852,7 @@ scrollbar:backdrop {
 scrollbar slider {
     min-width: 10px;
     min-height: 10px;
-    margin: 2px;
+    margin: 0;
     border-radius: 0;
     background-clip: padding-box;
     background-color: shade(@theme_bg_color, 0.8);
@@ -1917,7 +1900,6 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
     min-width: 10px;
     min-height: 10px;
     background-color: shade(@theme_bg_color, 0.8);
-    border: 2px solid transparent;
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
@@ -1931,7 +1913,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
-    margin: 0 2px;
+    margin: 0;
     min-width: 40px;
 }
 
@@ -1941,7 +1923,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
-    margin: 2px 0;
+    margin: 0;
     min-height: 40px;
 }
 
@@ -2388,7 +2370,7 @@ switch slider {
     text-shadow: none;
     -gtk-icon-shadow: none;
     background-color: mix(@theme_bg_color, @theme_fg_color, 0.05);
-    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
 switch:hover slider {
@@ -4019,7 +4001,7 @@ GtkBubbleWindow toolbar {
 decoration {
     border-radius: 0;
     border-width: 0px;
-    box-shadow: 0 3px 9px 1px @dark_shadow, 0 0 0 1px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 9px 1px alpha(@dark_shadow, 0.7), 0 0 0 1px rgba(0, 0, 0, 0.23);
     margin: 10px;
 }
 

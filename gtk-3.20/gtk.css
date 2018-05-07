@@ -10,9 +10,10 @@
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #fff;
 @define-color progressbar_color #06B025;
+@define-color text_entry_bg_color #e9eaec;
 
 /* dark color scheme */
-@define-color dark_bg_color #fff;
+@define-color dark_bg_color #e9eaee;
 @define-color dark_fg_color #000;
 
 /* colormap actually used by the theme, to be overridden in other css files */
