@@ -537,17 +537,6 @@ combobox entry {
     border-bottom-right-radius: 0;
 }
 
-combobox button {
-    border-width: 1px 1px 1px 1px;
-    border-bottom-left-radius: 0;
-    border-style: inset;
-    border-top-left-radius: 0;
-}
-
-comboboxtoolbar combobox button.combo:disabled {
-    border-width: 0;
-}
-
 /*********************
  * ComboBoxes arrows *
  *********************/
@@ -1420,8 +1409,7 @@ notebook tab:checked {
 }
 
 notebook tab label {
-    /*padding: 1px;*/
-    padding: 4px 8px 4px 8px;
+    padding: 10px;
 }
 
 notebook tab {
@@ -2623,6 +2611,7 @@ headerbar button:active *:disabled {
 }
 
 headerbar entry {
+    padding: 7px 6px;
     border-color: shade(@theme_bg_color, 0.8);
 }
 
@@ -3473,6 +3462,24 @@ GtkBubbleWindow.osd.background {
 
 GtkBubbleWindow toolbar {
     background-color: transparent;
+}
+
+/******************
+ * Stack switcher *
+ ******************/
+.stack-switcher.linked button {
+    min-height: 16px;
+    min-width: 80px;
+    border: none;
+    color: @theme_fg_color;
+    background-color: transparent;
+}
+
+.stack-switcher button:active,
+.stack-switcher button:checked,
+.stack-switcher button:active:hover,
+.stack-switcher button:checked:hover {
+    color: @theme_selected_bg_color;
 }
 
 /**********************
