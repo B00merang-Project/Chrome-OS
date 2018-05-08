@@ -303,9 +303,8 @@ button:checked:hover:focus {
 }
 
 button:disabled {
-    border-color: shade(@theme_bg_color, 0.85);
-    background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
+    border-color: transparent;
+    color: alpha(@theme_fg_color, 0.3);
 }
 
 button:active *:disabled {
