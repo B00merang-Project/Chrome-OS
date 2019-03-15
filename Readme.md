@@ -2,10 +2,7 @@
 
 Material designed theme based on Chrome OS 53
 
-![chromeos-theme](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/chrome-os-4_orig.png)
-
-### [Android theme available too!](https://github.com/B00merang-Project/Android) ###
----
+![chromeos-theme](https://github.com/B00merang-Project/gallery/raw/master/Chrome%20OS%2072%20(3).png)
 
 **Maintainer:** [Elbullazul](https://github.com/elbullazul)
 
@@ -15,13 +12,15 @@ Material designed theme based on Chrome OS 53
 
 **More info :** http://b00merang.weebly.com/chrome-os.html
 
-**Features**
-- Flat & elegant colors 
-- Specially crafted Cinnamon theme 
-- Clean and modern look
-- Compatibility with GTK 3.20 +
-- Material design effects! (thanks to Flat-Plat theme)
+### Manual installation
 
----
+Extract the zip file to the themes directory i.e. `/home/USERNAME/.themes`
 
-> **Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html**
+### Requirements
+
+- GTK+ 3.20 or above
+- Murrine and Pixmap theme engines
+
+### Contribute
+
+Contact us @ http://b00merang.weebly.com/contact.html
