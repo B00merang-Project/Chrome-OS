@@ -1,8 +1,12 @@
 # Chrome OS theme for Linux
 
-Material designed theme based on Chrome OS 53
+Material designed theme based on the latest Chrome OS version
 
 ![chromeos-theme](https://github.com/B00merang-Project/gallery/raw/master/Chrome%20OS%2072%20(3).png)
+
+Should you be more privacy-oriented, we have an incognito theme as well:
+
+![chrome-os-dark](https://github.com/B00merang-Project/gallery/raw/master/Chrome%20OS%2072%20(5).png)
 
 **Maintainer:** [Elbullazul](https://github.com/elbullazul)
 
