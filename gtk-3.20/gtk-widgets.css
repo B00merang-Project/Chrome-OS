@@ -1657,7 +1657,7 @@ toolbar {
     padding: 4px 8px;
     border: none;
     border-radius: 3px;
-    color: @toolbar_fg_color;
+    color: @theme_selected_bg_color;
     border-color: @borders;
     background-color: @toolbar_bg_color;
     outline-style: solid;
@@ -1678,7 +1678,7 @@ toolbar {
         color: @theme_unfocused_selected_fg_color;
         background-color: @theme_unfocused_selected_bg_color; }
     .primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
-      color: mix(@toolbar_fg_color, @theme_unfocused_disabled_fg_color, 0.1); }
+      color: mix(@theme_selected_bg_color, @theme_unfocused_disabled_fg_color, 0.1); }
       .primary-toolbar button:disabled:backdrop, .primary-toolbar .raised button:disabled:backdrop {
         color: @theme_unfocused_disabled_fg_color; }
     .primary-toolbar button:backdrop, .primary-toolbar .raised button:backdrop {
