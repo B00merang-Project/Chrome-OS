@@ -1,3 +1,5 @@
+[![built-with-azurra-framework](https://github.com/Elbullazul/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/Elbullazul/Azurra_framework)
+
 # Chrome OS theme for Linux
 
 Material designed theme based on the latest Chrome OS version
