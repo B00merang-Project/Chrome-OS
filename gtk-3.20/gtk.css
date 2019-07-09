@@ -1589,7 +1589,7 @@ headerbar, headerbar:not(.titlebar) {
     padding: 4px 8px;
     border: none;
     border-radius: 3px;
-    color: #000000;
+    color: #2196F3;
     border-color: transparent;
     background-color: transparent;
     outline-style: solid;
@@ -1610,7 +1610,7 @@ headerbar, headerbar:not(.titlebar) {
         color: #FFFFFF;
         background-color: #2196F3; }
     headerbar button:disabled, headerbar:not(.titlebar) button:disabled {
-      color: mix(#000000, mix(#000000, #FFFFFF, 0.75), 0.1); }
+      color: mix(#2196F3, mix(#000000, #FFFFFF, 0.75), 0.1); }
       headerbar button:disabled:backdrop, headerbar:not(.titlebar) button:disabled:backdrop {
         color: mix(#000000, #FFFFFF, 0.75); }
     headerbar button:backdrop, headerbar:not(.titlebar) button:backdrop {
@@ -2095,10 +2095,10 @@ headerbar.selection-mode, toolbar.selection-mode {
 decoration {
   border-radius: 0px 0px 0 0;
   border-width: 0px;
-  box-shadow: 0 8px 8px 0 alpha(#000000, 0.2), 0 0 0 1px #2196F3;
+  box-shadow: 8px 8px 10px 0 alpha(#000000, 0.3);
   margin: 10px; }
   decoration:backdrop {
-    box-shadow: 0 8px 8px 0 transparent, 0 5px 5px 0 alpha(#000000, 0.2), 0 0 0 1px shade(#FFFFFF, 0.9); }
+    box-shadow: 8px 8px 10px 0 transparent, 0 5px 5px 0 alpha(#000000, 0.2); }
   .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
   .popup decoration {
