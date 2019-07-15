@@ -201,37 +201,37 @@ button {
   button:backdrop {
     color: #000000;
     background-color: transparent; }
-button.flat {
-  padding: 4px 8px;
-  border: none;
-  border-radius: 3px;
-  color: #2196F3;
-  border-color: transparent;
-  background-color: transparent;
-  outline-style: solid;
-  outline-width: 2px;
-  outline-offset: 0;
-  -gtk-outline-radius: 4px; }
-  button.flat:active, button.flat:checked {
-    outline-color: shade(#2196F3, 1.4);
-    color: #FFFFFF;
-    background-color: #2196F3; }
-    button.flat:active:disabled, button.flat:checked:disabled {
-      color: mix(#FFFFFF, mix(#000000, #FFFFFF, 0.5), 0.4);
-      background-color: mix(#2196F3, mix(#000000, #FFFFFF, 0.95), 0.3); }
-      button.flat:active:disabled:backdrop, button.flat:checked:disabled:backdrop {
-        color: mix(#FFFFFF, mix(#000000, #FFFFFF, 0.75), 0.4);
-        background-color: mix(#2196F3, mix(#000000, #FFFFFF, 0.98), 0.3); }
-    button.flat:active:backdrop, button.flat:checked:backdrop {
+  button.flat {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 3px;
+    color: #2196F3;
+    border-color: transparent;
+    background-color: transparent;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 0;
+    -gtk-outline-radius: 4px; }
+    button.flat:active, button.flat:checked {
+      outline-color: shade(#2196F3, 1.4);
       color: #FFFFFF;
       background-color: #2196F3; }
-  button.flat:disabled {
-    color: mix(#2196F3, mix(#000000, #FFFFFF, 0.75), 0.1); }
-    button.flat:disabled:backdrop {
-      color: mix(#000000, #FFFFFF, 0.75); }
-  button.flat:backdrop {
-    color: #000000;
-    background-color: transparent; }
+      button.flat:active:disabled, button.flat:checked:disabled {
+        color: mix(#FFFFFF, mix(#000000, #FFFFFF, 0.5), 0.4);
+        background-color: mix(#2196F3, mix(#000000, #FFFFFF, 0.95), 0.3); }
+        button.flat:active:disabled:backdrop, button.flat:checked:disabled:backdrop {
+          color: mix(#FFFFFF, mix(#000000, #FFFFFF, 0.75), 0.4);
+          background-color: mix(#2196F3, mix(#000000, #FFFFFF, 0.98), 0.3); }
+      button.flat:active:backdrop, button.flat:checked:backdrop {
+        color: #FFFFFF;
+        background-color: #2196F3; }
+    button.flat:disabled {
+      color: mix(#2196F3, mix(#000000, #FFFFFF, 0.75), 0.1); }
+      button.flat:disabled:backdrop {
+        color: mix(#000000, #FFFFFF, 0.75); }
+    button.flat:backdrop {
+      color: #000000;
+      background-color: transparent; }
 
 checkbutton.text-button, radiobutton.text-button {
   padding: 4px;
@@ -239,18 +239,10 @@ checkbutton.text-button, radiobutton.text-button {
 
 checkbutton {
   padding: 4px; }
-  checkbutton:hover, checkbutton:active:hover {
+  checkbutton:hover, checkbutton:active:hover, checkbutton:selected, checkbutton:focus {
     padding: 4px;
     border-style: none;
     background-color: transparent; }
-  checkbutton:selected {
-    padding: 4px;
-    border-style: none;
-    background-color: transparent; }
-    checkbutton:selected:focus {
-      padding: 4px;
-      border-style: none;
-      background-color: transparent; }
 
 check {
   border-radius: 4px; }
@@ -260,11 +252,8 @@ radio {
 
 view.content-view check, .content-view.view check {
   background-color: transparent; }
-  view.content-view check:active, .content-view.view check:active {
+  view.content-view check:hover, view.content-view check:disabled, view.content-view check:selected, view.content-view check:active, .content-view.view check:hover, .content-view.view check:disabled, .content-view.view check:selected, .content-view.view check:active {
     background-color: transparent; }
-
-view.content-view check:hover, view.content-view check:disabled, view.content-view check:selected {
-  background-color: transparent; }
 
 check, radio {
   min-height: 24px;
@@ -2216,12 +2205,12 @@ panel-toplevel.background button {
     box-shadow: none;
     background-image: none;
     background-color: #2196F3; }
-#tasklist-button label {
-  color: alpha(#FFFFFF, 0.7); }
-  #tasklist-button label:hover {
+  #tasklist-button label {
     color: alpha(#FFFFFF, 0.7); }
-  #tasklist-button label:checked {
-    color: #FFFFFF; }
+    #tasklist-button label:hover {
+      color: alpha(#FFFFFF, 0.7); }
+    #tasklist-button label:checked {
+      color: #FFFFFF; }
 
 panel-toplevel.background na-tray-applet {
   -NaTrayApplet-icon-padding: 0;
