@@ -2138,6 +2138,7 @@ messagedialog {
     color: alpha(currentColor, 0.7); }
   .titlebar .titlebutton.close, .titlebar .titlebutton.maximize, .titlebar .titlebutton.minimize, .titlebar .titlebutton:not(separator) {
     padding: 2px 2px;
+    color: #000000;
     background-color: transparent; }
     .titlebar .titlebutton.close:active, .titlebar .titlebutton.maximize:active, .titlebar .titlebutton.minimize:active, .titlebar .titlebutton:not(separator):active {
       color: shade(#000000, 0.7); }
