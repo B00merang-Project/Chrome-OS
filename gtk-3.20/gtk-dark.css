@@ -355,12 +355,12 @@ entry {
     background-color: #B2E2F6; }
   entry:disabled {
     color: mix(#FFFFFF, #414141, 0.5);
-    border-color: mix(#FFFFFF, #414141, 0.95); }
+    border-color: shade(#414141, 0.9);
+    background-color: mix(#FFFFFF, #414141, 0.95); }
     entry:disabled:backdrop {
       color: mix(#FFFFFF, #414141, 0.75);
-      border-color: shade(#414141, 0.9); }
-  entry.read-only {
-    background-color: mix(#414141, mix(#FFFFFF, #414141, 0.95), 0.1); }
+      border-color: shade(#414141, 0.9);
+      background-color: mix(#FFFFFF, #414141, 0.98); }
   entry:backdrop {
     color: #FFFFFF;
     background-color: #2B2B2B; }
@@ -1303,34 +1303,48 @@ separator {
   combobox separator {
     border: none; }
 
-spinbutton:not(.vertical) selection, spinbutton:not(.vertical) selection:focus {
-  color: #FFFFFF;
-  background-color: #2196F3; }
-spinbutton button:disabled, spinbutton entry:disabled {
-  color: mix(#FFFFFF, #414141, 0.5); }
-  spinbutton button:disabled:backdrop, spinbutton entry:disabled:backdrop {
-    color: mix(#FFFFFF, #414141, 0.75); }
-spinbutton.horizontal entry {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 7px 15px; }
-spinbutton.horizontal button.down {
-  border-right-width: 0;
-  border-left-width: 0;
-  border-radius: 0; }
-spinbutton.horizontal button.up {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+spinbutton.horizontal {
+  border: 0px solid alpha(#FFFFFF, 0.3);
+  border-bottom-width: 2px;
+  border-radius: 0px;
+  background-color: #2B2B2B; }
+  spinbutton.horizontal:disabled {
+    border-color: shade(#414141, 0.9);
+    color: mix(#FFFFFF, #414141, 0.5);
+    background-color: mix(#FFFFFF, #414141, 0.95); }
+    spinbutton.horizontal:disabled:backdrop {
+      color: mix(#FFFFFF, #414141, 0.75);
+      background-color: mix(#FFFFFF, #414141, 0.98); }
+  spinbutton.horizontal:focus {
+    border-color: #2196F3; }
+  spinbutton.horizontal:backdrop {
+    background-color: #2B2B2B; }
+  spinbutton.horizontal entry {
+    border: none;
+    padding: 7px 15px;
+    background: none;
+    border-radius: 0px 0 0 0px; }
+  spinbutton.horizontal button {
+    border: none;
+    border-radius: 0;
+    background: none; }
+    spinbutton.horizontal button:disabled {
+      color: mix(#FFFFFF, #414141, 0.5);
+      background: none; }
+    spinbutton.horizontal button.up {
+      border-radius: 0 0px 0px 0; }
+spinbutton.vertical button {
+  padding: 7px 2px;
+  background: none; }
+  spinbutton.vertical button:disabled {
+    color: mix(#FFFFFF, #414141, 0.5);
+    background: none; }
 spinbutton.vertical entry {
-  border-radius: 0; }
-spinbutton.vertical button.up {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-width: 0; }
-spinbutton.vertical button.down {
-  border-top-width: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+  padding: 7px 2px;
+  border-width: 0;
+  border-radius: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px; }
 
 @keyframes spin {
   to {
@@ -1482,7 +1496,7 @@ headerbar, headerbar:not(.titlebar) {
     background-color: #414141; }
   .titlebar headerbar, .titlebar headerbar:backdrop, .titlebar headerbar:not(.titlebar), .titlebar headerbar:not(.titlebar):backdrop {
     background-color: transparent; }
-  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop, .tiled headerbar:not(.titlebar), .tiled headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop {
+  .tiled headerbar:backdrop, .tiled headerbar, .tiled-top headerbar:backdrop, .tiled-top headerbar, .tiled-right headerbar:backdrop, .tiled-right headerbar, .tiled-bottom headerbar:backdrop, .tiled-bottom headerbar, .tiled-left headerbar:backdrop, .tiled-left headerbar, .maximized headerbar:backdrop, .maximized headerbar, .fullscreen headerbar:backdrop, .fullscreen headerbar, .tiled headerbar:not(.titlebar):backdrop, .tiled headerbar:not(.titlebar), .tiled-top headerbar:not(.titlebar):backdrop, .tiled-top headerbar:not(.titlebar), .tiled-right headerbar:not(.titlebar):backdrop, .tiled-right headerbar:not(.titlebar), .tiled-bottom headerbar:not(.titlebar):backdrop, .tiled-bottom headerbar:not(.titlebar), .tiled-left headerbar:not(.titlebar):backdrop, .tiled-left headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .fullscreen headerbar:not(.titlebar):backdrop, .fullscreen headerbar:not(.titlebar) {
     border-radius: 0; }
   headerbar .title, headerbar:not(.titlebar) .title {
     padding-left: 12px;
@@ -1616,18 +1630,17 @@ toolbar {
       color: #FFFFFF;
       background-color: #414141; }
 
-.inline-toolbar toolbar {
-  -GtkToolbar-button-relief: normal;
+.inline-toolbar {
   padding: 1px;
   border-width: 1px;
   border-style: solid;
   border-color: mix(shade(#414141, 0.9), #414141, 0.5);
   border-radius: 0;
   background-color: #414141; }
-  .inline-toolbar toolbar:last-child {
-    border-width: 0 1px 1px 1px;
-    border-radius: 0; }
-  .inline-toolbar toolbar button {
+  .inline-toolbar:backdrop {
+    border-color: shade(#414141, 0.9);
+    background-color: #414141; }
+  .inline-toolbar toolbutton > button {
     padding: 4px 8px;
     border: none;
     border-radius: 3px;
@@ -1638,24 +1651,24 @@ toolbar {
     outline-width: 2px;
     outline-offset: 0;
     -gtk-outline-radius: 4px; }
-    .inline-toolbar toolbar button:active, .inline-toolbar toolbar button:checked {
+    .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
       outline-color: shade(#2196F3, 1.4);
       color: #FFFFFF;
       background-color: #2196F3; }
-      .inline-toolbar toolbar button:active:disabled, .inline-toolbar toolbar button:checked:disabled {
+      .inline-toolbar toolbutton > button:active:disabled, .inline-toolbar toolbutton > button:checked:disabled {
         color: mix(#FFFFFF, mix(#FFFFFF, #414141, 0.5), 0.4);
         background-color: mix(#2196F3, mix(#FFFFFF, #414141, 0.95), 0.3); }
-        .inline-toolbar toolbar button:active:disabled:backdrop, .inline-toolbar toolbar button:checked:disabled:backdrop {
+        .inline-toolbar toolbutton > button:active:disabled:backdrop, .inline-toolbar toolbutton > button:checked:disabled:backdrop {
           color: mix(#FFFFFF, mix(#FFFFFF, #414141, 0.75), 0.4);
           background-color: mix(#2196F3, mix(#FFFFFF, #414141, 0.98), 0.3); }
-      .inline-toolbar toolbar button:active:backdrop, .inline-toolbar toolbar button:checked:backdrop {
+      .inline-toolbar toolbutton > button:active:backdrop, .inline-toolbar toolbutton > button:checked:backdrop {
         color: #FFFFFF;
         background-color: #2196F3; }
-    .inline-toolbar toolbar button:disabled {
+    .inline-toolbar toolbutton > button:disabled {
       color: mix(#FFFFFF, mix(#FFFFFF, #414141, 0.75), 0.1); }
-      .inline-toolbar toolbar button:disabled:backdrop {
+      .inline-toolbar toolbutton > button:disabled:backdrop {
         color: mix(#FFFFFF, #414141, 0.75); }
-    .inline-toolbar toolbar button:backdrop {
+    .inline-toolbar toolbutton > button:backdrop {
       color: #FFFFFF;
       background-color: #414141; }
 
@@ -2113,7 +2126,7 @@ decoration {
   margin: 10px; }
   decoration:backdrop {
     box-shadow: 8px 8px 10px 0 transparent, 5px 5px 5px 0 alpha(#000000, 0.2); }
-  .fullscreen decoration, .tiled decoration {
+  .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
     box-shadow: 0 0 0 1px alpha(#000000, 0.1);
@@ -2134,38 +2147,6 @@ decoration {
 
 window.background.csd.popup {
   border-radius: 8px; }
-
-messagedialog {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
-  messagedialog .background.csd {
-    border-radius: 4px;
-    color: #FFFFFF;
-    background-color: #414141; }
-  messagedialog decoration {
-    border-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow: 0 1px 2px alpha(black, 0.2); }
-  messagedialog .titlebar.horizontal {
-    border: none;
-    border-radius: 4px 4px 0 0;
-    background-image: none;
-    background-color: #414141; }
-  messagedialog.csd .dialog-action-area button {
-    padding: 10px;
-    border-radius: 0;
-    outline-offset: -2px; }
-    messagedialog.csd .dialog-action-area button:last-child {
-      border-radius: 0px;
-      border-bottom-right-radius: 4px; }
-    messagedialog.csd .dialog-action-area button:first-child {
-      border-radius: 0px;
-      border-bottom-left-radius: 4px; }
-    messagedialog.csd .dialog-action-area button:only-child {
-      border-radius: 0px;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px; }
 
 .titlebar {
   border-bottom: 1px solid shade(#414141, 0.9);
@@ -2201,6 +2182,38 @@ messagedialog {
     border-bottom-color: shade(#414141, 0.9); }
   window.ssd .titlebar, window.ssd .titlebar:not(headerbar), window.ssd headerbar.default-decoration, window.ssd .csd headerbar.default-decoration, window.ssd .default-decoration.titlebar:not(headerbar), window.ssd .csd .default-decoration.titlebar:not(headerbar) {
     border-bottom: none; }
+
+messagedialog {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  messagedialog .background.csd {
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: #414141; }
+  messagedialog decoration {
+    border-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 1px 2px alpha(black, 0.2); }
+  messagedialog .titlebar.horizontal {
+    border: none;
+    border-radius: 4px 4px 0 0;
+    background-image: none;
+    background-color: #414141; }
+  messagedialog.csd .dialog-action-area button {
+    padding: 10px;
+    border-radius: 0;
+    outline-offset: -2px; }
+    messagedialog.csd .dialog-action-area button:last-child {
+      border-radius: 0px;
+      border-bottom-right-radius: 4px; }
+    messagedialog.csd .dialog-action-area button:first-child {
+      border-radius: 0px;
+      border-bottom-left-radius: 4px; }
+    messagedialog.csd .dialog-action-area button:only-child {
+      border-radius: 0px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
