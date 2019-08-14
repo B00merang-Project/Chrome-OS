@@ -237,13 +237,6 @@ checkbutton.text-button, radiobutton.text-button {
   padding: 4px;
   outline-width: 0; }
 
-checkbutton {
-  padding: 4px; }
-  checkbutton:hover, checkbutton:active:hover, checkbutton:selected, checkbutton:focus {
-    padding: 4px;
-    border-style: none;
-    background-color: transparent; }
-
 check {
   border-radius: 4px; }
 
@@ -255,22 +248,22 @@ view.content-view check, .content-view.view check {
   view.content-view check:hover, view.content-view check:disabled, view.content-view check:selected, view.content-view check:active, .content-view.view check:hover, .content-view.view check:disabled, .content-view.view check:selected, .content-view.view check:active {
     background-color: transparent; }
 
-check, radio {
+check, .check, radio, .radio {
   min-height: 24px;
   min-width: 24px;
   margin: -8px;
   padding: 8px; }
-  check:hover, radio:hover {
+  check:hover, .check:hover, radio:hover, .radio:hover {
     box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08); }
-    check:hover:focus, radio:hover:focus {
+    check:hover:focus, .check:hover:focus, radio:hover:focus, .radio:hover:focus {
       box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.12); }
-  check:focus, radio:focus {
+  check:focus, .check:focus, radio:focus, .radio:focus {
     box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16); }
-  check:checked, check:indeterminate, radio:checked, radio:indeterminate {
+  check:checked, check:indeterminate, .check:checked, .check:indeterminate, radio:checked, radio:indeterminate, .radio:checked, .radio:indeterminate {
     color: #2196F3; }
-    check:checked:disabled, check:indeterminate:disabled, radio:checked:disabled, radio:indeterminate:disabled {
+    check:checked:disabled, check:indeterminate:disabled, .check:checked:disabled, .check:indeterminate:disabled, radio:checked:disabled, radio:indeterminate:disabled, .radio:checked:disabled, .radio:indeterminate:disabled {
       color: alpha(black, 0.26); }
-  check:disabled, radio:disabled {
+  check:disabled, .check:disabled, radio:disabled, .radio:disabled {
     color: alpha(black, 0.1); }
 
 check {
