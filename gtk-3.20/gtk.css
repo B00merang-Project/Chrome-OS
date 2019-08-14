@@ -2129,8 +2129,10 @@ decoration {
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
-    box-shadow: 0 0 0 1px alpha(#000000, 0.1);
-    border-radius: 8px; }
+    box-shadow: none; }
+  .csd.popup decoration {
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
   .ssd decoration {
     border-radius: 0px 0px 0 0;
     box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
