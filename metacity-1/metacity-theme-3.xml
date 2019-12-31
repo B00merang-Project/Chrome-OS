@@ -45,7 +45,7 @@
 
 <!-- geometries -->
 
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="false" rounded_top_right="false">
+<frame_geometry name="normal" title_scale="medium" rounded_top_left="1" rounded_top_right="1">
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
@@ -58,7 +58,7 @@
   <distance name="button_height" value="25"/>
 </frame_geometry>
 
-<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="normal">
+<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="1" rounded_top_right="1" parent="normal">
 </frame_geometry>
 
 <frame_geometry name="max" title_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
