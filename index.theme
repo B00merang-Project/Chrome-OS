@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Chromium OS Theme
-Comment=Chromium OS UI for Linux OSes
-Comment=Author : Christian Medel (Elbullazul)
-Version=v1.0 (beta)
+Name=Chrome OS
+Comment=Chrome OS UI for Linux OSes
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Chromium OS Theme
-MetacityTheme=Chromium OS Theme
+GtkTheme=Chrome OS
+MetacityTheme=Chrome OS
+IconTheme=Papirus
+CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
