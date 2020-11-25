@@ -2412,6 +2412,11 @@ panel-toplevel.background na-tray-applet {
       color: #000000;
       background-color: #FFFFFF; }
 
+wnck-pager:hover {
+  background-color: #2196F3; }
+wnck-pager:selected {
+  background-color: #1a84d9; }
+
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
   border-radius: 3px;
