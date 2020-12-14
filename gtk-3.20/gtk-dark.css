@@ -1480,11 +1480,11 @@ headerbar {
   .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
     border-radius: 0; }
   separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
-    border-top-left-radius: 0px; }
+    border-top-left-radius: 4px; }
     .maximized separator:first-child + headerbar, .tiled separator:first-child + headerbar, .maximized separator:first-child + headerbar:backdrop, .tiled separator:first-child + headerbar:backdrop, .maximized headerbar:first-child, .tiled headerbar:first-child, .maximized headerbar:first-child:backdrop, .tiled headerbar:first-child:backdrop {
       border-radius: 0; }
   headerbar:last-child, headerbar:last-child:backdrop {
-    border-top-right-radius: 0px; }
+    border-top-right-radius: 4px; }
     .maximized headerbar:last-child, .tiled headerbar:last-child, .maximized headerbar:last-child:backdrop, .tiled headerbar:last-child:backdrop {
       border-radius: 0; }
   headerbar .title {
@@ -1530,7 +1530,7 @@ headerbar {
   headerbar entry {
     padding: 4px 8px; }
   headerbar.titlebar, .titlebar headerbar {
-    border-radius: 0px 0px 0px 0px; }
+    border-radius: 4px 4px 0px 0px; }
   headerbar .titlebutton.close, headerbar .titlebutton.maximize, headerbar .titlebutton.minimize, headerbar .titlebutton:not(separator) {
     padding: 2px 2px;
     color: #FFFFFF;
@@ -2119,7 +2119,7 @@ headerbar.selection-mode, toolbar.selection-mode {
       color: #24689d; }
 
 decoration {
-  border-radius: 0px 0px 0 0;
+  border-radius: 4px 4px 0 0;
   border-width: 0px;
   box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.3);
   margin: 10px; }
@@ -2133,12 +2133,12 @@ decoration {
     border-radius: 8px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
   .ssd decoration {
-    border-radius: 0px 0px 0 0;
+    border-radius: 4px 4px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
     .ssd decoration.maximized {
       border-radius: 0; }
   tooltip.csd decoration {
-    border-radius: 0px;
+    border-radius: 4px;
     box-shadow: none; }
   .solid-csd decoration {
     margin: 1px;
@@ -2226,8 +2226,6 @@ panel-toplevel.background button {
     box-shadow: none;
     background-image: none;
     background-color: #2196F3; }
-    panel-toplevel.background button:active label, panel-toplevel.background button:checked label {
-      color: #FFFFFF; }
 
 #tasklist-button {
   color: #FFFFFF;
@@ -2244,8 +2242,6 @@ panel-toplevel.background button {
     box-shadow: none;
     background-image: none;
     background-color: #2196F3; }
-    #tasklist-button:active label, #tasklist-button:checked label {
-      color: #FFFFFF; }
   #tasklist-button label {
     color: rgba(255, 255, 255, 0.7); }
     #tasklist-button label:hover {
@@ -2297,8 +2293,6 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2196F3; }
-      .mate-panel-menu-bar > .button:not(#tasklist-button):active label, .mate-panel-menu-bar > .button:not(#tasklist-button):checked label {
-        color: #FFFFFF; }
   .mate-panel-menu-bar #tasklist-button {
     color: #FFFFFF;
     background-color: #191B1F;
@@ -2314,8 +2308,8 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2196F3; }
-      .mate-panel-menu-bar #tasklist-button:active label, .mate-panel-menu-bar #tasklist-button:checked label {
-        color: #FFFFFF; }
+    .mate-panel-menu-bar #tasklist-button label {
+      color: #FFFFFF; }
   .mate-panel-menu-bar PanelSeparator {
     color: #121315;
     padding-top: 4px;
@@ -2365,8 +2359,6 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2196F3; }
-      .xfce4-panel.panel button.flat:active label, .xfce4-panel.panel button.flat:checked label, .xfce4-panel.panel button.sidebar-button:active label, .xfce4-panel.panel button.sidebar-button:checked label {
-        color: #FFFFFF; }
   .xfce4-panel.panel .tasklist button {
     color: #FFFFFF;
     background-color: #191B1F;
@@ -2382,8 +2374,6 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2196F3; }
-      .xfce4-panel.panel .tasklist button:active label, .xfce4-panel.panel .tasklist button:checked label {
-        color: #FFFFFF; }
 
 #XfceNotifyWindow.osd {
   background-color: #414141;
@@ -2424,10 +2414,12 @@ panel-toplevel.background na-tray-applet {
       color: #FFFFFF;
       background-color: #414141; }
 
-wnck-pager:hover {
-  background-color: #2196F3; }
-wnck-pager:selected {
-  background-color: #1a84d9; }
+wnck-pager {
+  background-color: #191B1F; }
+  wnck-pager:hover {
+    background-color: #2196F3; }
+  wnck-pager:selected {
+    background-color: #1a84d9; }
 
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
